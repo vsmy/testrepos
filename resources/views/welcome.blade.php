@@ -204,6 +204,60 @@
         </div>
     </footer>
 
+
+    <div class="grid-container">
+        <div class="img1">  <div class="card">
+                <div class="flag purple"></div>
+                <div class="shadow-box">
+                    <img src="img/instagram-card-picture-5.png"></div>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                <span><img src="img/face-avatar.png" alt="">johndue</span>
+            </div></div>
+        <div class="img2">  <div class="card">
+                <div class="flag purple"></div>
+                <div class="shadow-box">
+                    <img src="img/instagram-card-picture-5.png"></div>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                <span><img src="img/face-avatar.png" alt="">johndue</span>
+            </div></div>
+        <div class="img3">  <div class="card">
+                <div class="flag purple"></div>
+                <div class="shadow-box">
+                    <img src="img/instagram-card-picture-5.png"></div>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                <span><img src="img/face-avatar.png" alt="">johndue</span>
+            </div></div>
+        <div class="img4">  <div class="card">
+                <div class="flag purple"></div>
+                <div class="shadow-box">
+                    <img src="img/instagram-card-picture-5.png"></div>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                <span><img src="img/face-avatar.png" alt="">johndue</span>
+            </div></div>
+        <div class="img5">  <div class="card">
+                <div class="flag purple"></div>
+                <div class="shadow-box">
+                    <img src="img/instagram-card-picture-5.png"></div>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                <span><img src="img/face-avatar.png" alt="">johndue</span>
+            </div></div>
+    </div>
+
+    <style>
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
 @endsection
 
 

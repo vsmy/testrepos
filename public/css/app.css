@@ -982,3 +982,78 @@ body {
   width: 100%;
 }
 
+.grid-container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.grid-container *:after {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr 1fr 1fr 1fr 0.9fr 1.1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr [\31 1] 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "img1 img1 . . . . . . img4 img4" "img1 img1 . . img3 img3 . . img4 img4" ". . . . img3 img3 . . . ." ". img2 img2 . . . . img5 img5 ." ". img2 img2 . . . . img5 img5 ." ". . . . . . . . . .";
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.9fr;
+    grid-template-rows: 1fr [\31 1] 1fr 1fr 1fr 1fr;
+    grid-template-areas: "img1 img1 . . img4 img4" "img1 img1 img3 img3 img4 img4" ". . img3 img3 . ." "img2 img2 . . img5 img5" "img2 img2 . . img5 img5";
+  }
+
+  .img1 {
+    grid-area: img1;
+  }
+
+  .img2 {
+    grid-area: img2;
+  }
+
+  .img3 {
+    grid-area: img3;
+  }
+
+  .img4 {
+    grid-area: img4;
+  }
+
+  .img5 {
+    grid-area: img5;
+  }
+}
+
+@media (max-width: 425px) {
+  .grid-container {
+    flex-direction: column;
+    display: flex;
+  }
+}
+
