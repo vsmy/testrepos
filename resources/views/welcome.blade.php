@@ -151,50 +151,185 @@
         </div>
     </section>
   <section>
-        <div class="tabs">
-            <div class="m-auto tab-toggler"></div>
-            <div class="card">
-                <div class="flag yellow"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-1.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div>
-            <div class="card">
-                <div class="flag green"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-2.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div>
-            <div class="card">
-                <div class="flag salad"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-3.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div>
-            <div class="card">
-                <div class="flag blue"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-4.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div>
-            <div class="card">
-                <div class="flag purple"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-5.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div>
-            <div class="button-block see-all">
-                <button>
-                    <span class="button-text">Se mer</span>
-                </button>
+        <div class="container container-wider">
+            <div class="tabs">
+                <div class="upper-block">
+                    <div class="tab-toggler nav flex-column nav-pills" id="myTab"  id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-instagram-tab" data-toggle="pill" href="#v-pills-instagram" role="tab" aria-controls="v-pills-instagram" aria-selected="true">
+                            <div class="tab-btn tab-btn-instagram">
+                                <i class="icon-instagram icon-gradient-inst"></i>
+                            </div>
+                        </a>
+                        <a class="nav-link" id="v-pills-youtube-tab" data-toggle="pill" href="#v-pills-youtube" role="tab" aria-controls="v-pills-youtube" aria-selected="false">
+                            <div class="tab-btn tab-btn-youtube">
+                                <i class="icon-youtube"></i>
+                            </div>
+                        </a>
+                        <a class="nav-link" id="v-pills-bookopened-tab" data-toggle="pill" href="#v-pills-bookopened" role="tab" aria-controls="v-pills-bookopened" aria-selected="false">
+                            <div class="tab-btn tab-btn-bookopened">
+                                <i class="icon-book_opened"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-instagram" role="tabpanel" aria-labelledby="v-pills-instagram-tab">
+                            <div class="grid-container">
+                                <div class="img1">
+                                    <div class="card">
+                                        <div class="flag yellow"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/instagram-card-picture-1.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                                <div class="img2">
+                                    <div class="card">
+                                        <div class="flag green"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/instagram-card-picture-2.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                                <div class="img3">
+                                    <div class="card">
+                                        <div class="flag salad"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/instagram-card-picture-3.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                                <div class="img4">
+                                    <div class="card">
+                                        <div class="flag blue"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/instagram-card-picture-4.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                                <div class="img5">
+                                    <div class="card">
+                                        <div class="flag purple"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/instagram-card-picture-5.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-youtube" role="tabpanel" aria-labelledby="v-pills-youtube-tab">
+                            <div class="grid-container">
+                                <div class="img1">
+                                    <div class="card">
+                                        <div class="flag yellow"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/youtube-card-picture-1.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                                <div class="img2">
+                                    <div class="card">
+                                        <div class="flag green"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/youtube-card-picture-2.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                                <div class="img3">
+                                    <div class="card">
+                                        <div class="flag salad"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/youtube-card-picture-3.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                                <div class="img4">
+                                    <div class="card">
+                                        <div class="flag blue"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/youtube-card-picture-4.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                                <div class="img5">
+                                    <div class="card">
+                                        <div class="flag purple"></div>
+                                        <div class="shadow-box">
+                                            <img src="img/youtube-card-picture-5.png"></div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
+                                        <span><img src="img/face-avatar.png" alt="">johndue</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="button-block see-all">
+                    <button>
+                        <span class="button-text">Se mer</span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
+{{--    <div class="grid-container">--}}
+{{--        <div class="img1">--}}
+{{--            <div class="card">--}}
+{{--                <div class="flag purple"></div>--}}
+{{--                <div class="shadow-box">--}}
+{{--                    <img src="img/instagram-card-picture-5.png"></div>--}}
+{{--                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>--}}
+{{--                <span><img src="img/face-avatar.png" alt="">johndue</span>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="img2">--}}
+{{--            <div class="card">--}}
+{{--                <div class="flag purple"></div>--}}
+{{--                <div class="shadow-box">--}}
+{{--                    <img src="img/instagram-card-picture-5.png"></div>--}}
+{{--                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>--}}
+{{--                <span><img src="img/face-avatar.png" alt="">johndue</span>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="img3">--}}
+{{--            <div class="card">--}}
+{{--                <div class="flag purple"></div>--}}
+{{--                <div class="shadow-box">--}}
+{{--                    <img src="img/instagram-card-picture-5.png"></div>--}}
+{{--                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>--}}
+{{--                <span><img src="img/face-avatar.png" alt="">johndue</span>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="img4">--}}
+{{--            <div class="card">--}}
+{{--                <div class="flag purple"></div>--}}
+{{--                <div class="shadow-box">--}}
+{{--                    <img src="img/instagram-card-picture-5.png"></div>--}}
+{{--                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>--}}
+{{--                <span><img src="img/face-avatar.png" alt="">johndue</span>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="img5">--}}
+{{--            <div class="card">--}}
+{{--                <div class="flag purple"></div>--}}
+{{--                <div class="shadow-box">--}}
+{{--                    <img src="img/instagram-card-picture-5.png"></div>--}}
+{{--                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>--}}
+{{--                <span><img src="img/face-avatar.png" alt="">johndue</span>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-line">
@@ -204,57 +339,12 @@
         </div>
     </footer>
 
-
-    <div class="grid-container">
-        <div class="img1">  <div class="card">
-                <div class="flag purple"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-5.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div></div>
-        <div class="img2">  <div class="card">
-                <div class="flag purple"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-5.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div></div>
-        <div class="img3">  <div class="card">
-                <div class="flag purple"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-5.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div></div>
-        <div class="img4">  <div class="card">
-                <div class="flag purple"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-5.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div></div>
-        <div class="img5">  <div class="card">
-                <div class="flag purple"></div>
-                <div class="shadow-box">
-                    <img src="img/instagram-card-picture-5.png"></div>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                <span><img src="img/face-avatar.png" alt="">johndue</span>
-            </div></div>
-    </div>
-
-    <style>
-
-    </style>
-
-
-
-
-
-
-
-
-
+    <script type="text/javascript">
+        $('#myTab .tab-btn').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
 
 
 

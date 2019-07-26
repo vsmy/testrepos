@@ -368,10 +368,6 @@
   }
 }
 
-.footer .footer-line .footer-link {
-  font-family: Helvetica;
-}
-
 @media (max-width: 575px) {
   .garden-section .row.main-content-text {
     background-image: url(/img/tree.png);
@@ -656,6 +652,7 @@ body {
   background-size: cover;
   display: flex;
   align-items: center;
+  min-height: 100vh;
   justify-content: space-around;
 }
 
@@ -688,8 +685,6 @@ body {
 
 .big-map .cards .card,
 .tabs .card {
-  height: 400px;
-  width: 295px;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -702,7 +697,7 @@ body {
 .card .flag {
   position: absolute;
   left: 30px;
-  top: 0%;
+  top: -30px;
   border-radius: 0px 0px 25px 25px;
   width: 50px;
   height: 70px;
@@ -814,19 +809,94 @@ body {
   font-size: 0.875rem;
 }
 
+.container-wider {
+  max-width: 1302px !important;
+}
+
 .tabs {
   background-image: url(/img/tabs-instagram-bg.png);
+  min-height: 100vh;
+  justify-content: space-between;
   background-repeat: no-repeat;
-  height: 100vh;
+  align-items: center;
+  flex-direction: column;
   position: relative;
   display: flex;
   flex-wrap: wrap;
 }
 
-.tabs .card {
-  height: 325px;
-  width: 295px;
+.tabs .tab-toggler {
+  width: 682px;
+  height: 270px;
+  margin: 0 auto;
+  background: url(/images/tab-panel.png?fdeee7f5fd491e37c790a00785ccdeb1) no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+.tabs .tab-toggler .tab-btn {
+  width: 80px;
+  height: 80px;
   position: absolute;
+  border-radius: 50%;
+  border: 0.5px solid #C1C1C1;
+  line-height: 1;
+}
+
+.tabs .tab-toggler .tab-btn.tab-btn-instagram {
+  padding: 24px;
+  left: 90px;
+  top: 57px;
+}
+
+.tabs .tab-toggler .tab-btn.tab-btn-instagram .icon-gradient-inst {
+  color: #3E434E;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.tabs .tab-toggler .tab-btn.tab-btn-youtube {
+  padding: 26px 23px;
+  bottom: 26px;
+  left: 298px;
+  color: #0B2349;
+  font-size: 1.7rem;
+}
+
+.tabs .tab-toggler .tab-btn.tab-btn-bookopened {
+  padding: 26px 23px;
+  top: 57px;
+  right: 89px;
+  color: #0B2349;
+  font-size: 1.7rem;
+}
+
+.tabs .tab-toggler [aria-selected=true] {
+  color: unset;
+  background-color: transparent !important;
+}
+
+.tabs .tab-toggler [aria-selected=true] .tab-btn {
+  background-color: white !important;
+}
+
+.tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-instagram .icon-gradient-inst {
+  background: linear-gradient(45deg, #FFDD20 3%, #FF4343 52%, #B762FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+}
+
+.tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-youtube {
+  color: #FF2020;
+}
+
+.tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-bookopened {
+  color: #FFCA00;
+}
+
+.tabs .card {
   background-color: transparent;
   border: none;
 }
@@ -876,31 +946,6 @@ body {
   align-items: baseline;
 }
 
-.tabs .card:nth-child(1) {
-  top: 8%;
-  left: 7%;
-}
-
-.tabs .card:nth-child(2) {
-  top: 48%;
-  left: 17%;
-}
-
-.tabs .card:nth-child(3) {
-  top: 36%;
-  left: 40%;
-}
-
-.tabs .card:nth-child(4) {
-  top: 51%;
-  left: 63%;
-}
-
-.tabs .card:nth-child(5) {
-  top: 12%;
-  left: 73%;
-}
-
 .tabs .card p {
   position: absolute;
   bottom: 75px;
@@ -912,10 +957,8 @@ body {
   z-index: 500;
 }
 
-.tabs .button-block.see-all {
-  position: absolute;
-  bottom: 11%;
-  left: 43%;
+.tab-content {
+  margin-top: -100px;
 }
 
 .fullscreen-bg {
@@ -937,13 +980,15 @@ body {
 }
 
 .footer {
-  background-color: #EDFDFA;
+  background-color: #D8D8D8;
   padding: 31px 0;
+  margin-top: 50px;
 }
 
 .footer .footer-line {
   display: flex;
   justify-content: space-between;
+  font-family: Futura-Medium;
 }
 
 .navbar-dark .navbar-toggler {
@@ -982,51 +1027,49 @@ body {
   width: 100%;
 }
 
-.grid-container * {
+grid-container * {
   border: 1px solid red;
   position: relative;
 }
 
-.grid-container *:after {
-  content: attr(class);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .grid-container {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr 1fr 1fr 1fr 0.9fr 1.1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr [\31 1] 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "img1 img1 . . . . . . img4 img4" "img1 img1 . . img3 img3 . . img4 img4" ". . . . img3 img3 . . . ." ". img2 img2 . . . . img5 img5 ." ". img2 img2 . . . . img5 img5 ." ". . . . . . . . . .";
+  grid-template-columns: 1.39fr 1.39fr 1.39fr 0.3fr 2.76fr 0.3fr 1.39fr 1.39fr 1.39fr;
+  grid-template-rows: 0.27fr 2.02fr 0.76fr 0.29fr 0.31fr 1.73fr 1.05fr 0.29fr;
+  grid-template-areas: "img1 img1 . . . . . . ." "img1 img1 . . . . . img4 img4" "img1 img1 . . img3 . . img4 img4" ". . . . img3 . . img4 img4" ". img2 img2 . img3 . . . ." ". img2 img2 . img3 . img5 img5 ." ". img2 img2 . . . img5 img5 ." ". . . . . . img5 img5 .";
 }
 
 .img1 {
   grid-area: img1;
+  width: 300px;
 }
 
 .img2 {
   grid-area: img2;
+  width: 300px;
 }
 
 .img3 {
   grid-area: img3;
+  width: 300px;
 }
 
 .img4 {
   grid-area: img4;
+  width: 300px;
 }
 
 .img5 {
   grid-area: img5;
+  width: 300px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1362px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.9fr;
-    grid-template-rows: 1fr [\31 1] 1fr 1fr 1fr 1fr;
-    grid-template-areas: "img1 img1 . . img4 img4" "img1 img1 img3 img3 img4 img4" ". . img3 img3 . ." "img2 img2 . . img5 img5" "img2 img2 . . img5 img5";
+    grid-template-columns: 0.25fr 0.75fr 0.25fr 0.13fr 1fr 0.13fr 0.25fr 0.75fr 0.25fr;
+    grid-template-rows: 0.66fr 0.33fr 0.13fr 0.54fr 0.46fr;
+    grid-template-areas: "img1 img1 . . . . . img4 img4" "img1 img1 . . img3 . . img4 img4" ". . . . img3 . . . ." ". img2 img2 . img3 . img5 img5 ." ". img2 img2 . . . img5 img5 .";
   }
 
   .img1 {
@@ -1050,10 +1093,45 @@ body {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1200px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.13fr 0.37fr 0.26fr 0.37fr 0.13fr 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.13fr 1fr;
+    grid-template-areas: "img1 img1 . . . . . img4 img4" "img1 img1 . img3 img3 img3 . img4 img4" ". . . img3 img3 img3 . . ." ". . . . . . . . ." ". img2 img2 img2 . img5 img5 img5 .";
+  }
+
+  .tabs .button-block.see-all {
+    margin: unset;
+  }
+}
+
+@media (max-width: 993px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.66fr 0.33fr 0.33fr 0.33fr 0.66fr;
+    grid-template-rows: 1fr 0.13fr 1fr 0.13fr 1fr;
+    grid-template-areas: "img1 img1 . img4 img4" ". . . . ." ". img3 img3 img3 ." ". . . . ." "img2 img2 . img5 img5";
+  }
+}
+
+@media (max-width: 769px) {
   .grid-container {
     flex-direction: column;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+}
+
+.gradient-inst {
+  font-size: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+  margin: 20px auto;
 }
 
