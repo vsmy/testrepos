@@ -11,28 +11,35 @@
     <div class="collapse navbar-collapse nav-links" id="navbarSupportedContent-4">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item  dropdown">
-                <a  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a  href="#" id="Borough" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    Borough
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="borough/1">Kymlinge</a>
-                    <a class="dropdown-item" href="borough/2">Stora Ursvik</a>
-                    <a class="dropdown-item" href="borough/3">Lilla Ursvik</a>
-                    <a class="dropdown-item" href="borough/4">Brotorp</a>
-                    <a class="dropdown-item" href="borough/5">Rissne</a>
-                    <a class="dropdown-item" href="borough/6">Hallonbergen</a>
-                    <a class="dropdown-item" href="borough/7">Ör</a>
-                    <a class="dropdown-item" href="borough/8">Duvbo</a>
-                    <a class="dropdown-item" href="borough/9">Storskogen</a>
-                    <a class="dropdown-item" href="borough/10">Centrala Sundbyberg</a>
-                    <a class="dropdown-item" href="borough/11">Lilla Alby</a>
+                <div class="dropdown-menu" aria-labelledby="Borough">
+                    <a class="dropdown-item" href="/borough/1">Kymlinge</a>
+                    <a class="dropdown-item" href="/borough/2">Stora Ursvik</a>
+                    <a class="dropdown-item" href="/borough/3">Lilla Ursvik</a>
+                    <a class="dropdown-item" href="/borough/4">Brotorp</a>
+                    <a class="dropdown-item" href="/borough/5">Rissne</a>
+                    <a class="dropdown-item" href="/borough/6">Hallonbergen</a>
+                    <a class="dropdown-item" href="/borough/7">Ör</a>
+                    <a class="dropdown-item" href="/borough/8">Duvbo</a>
+                    <a class="dropdown-item" href="/borough/9">Storskogen</a>
+                    <a class="dropdown-item" href="/borough/10">Centrala Sundbyberg</a>
+                    <a class="dropdown-item" href="/borough/11">Lilla Alby</a>
                 </div>
             </li>
             <li class="nav-item">
                 Blogg
             </li>
-            <li class="nav-item">
-                Projekt
+            <li class="nav-item dropdown">
+                <a  href="#" id="Projekt" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projekt
+                </a>
+                <div class="dropdown-menu" aria-labelledby="Projekt">
+                    <a class="dropdown-item" href="/projects/1">Projekt1</a>
+                    <a class="dropdown-item" href="/projects/2">Projekt2</a>
+                </div>
+
             </li>
             <li class="nav-item">
                 <a href="{{ route('about') }}">Om oss</a>
