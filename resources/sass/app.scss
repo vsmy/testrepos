@@ -2,7 +2,7 @@
 @import 'variables';
 @import 'maps';
 
-body.main {
+body .main {
   font-family: Futura-Medium !important;
 }
 
@@ -855,9 +855,11 @@ body.main {
         margin: 20px 0;
         background-color: #FFF1BC;
         & .progress-bar {
+          transition: width 0.6s linear;
           width:0px;
           box-shadow: none;
-          background: #fbe8aa;}
+          background: #FFCA00;
+        }
       }
       &.complete .progress .progress-bar {
         width:100%;
@@ -868,10 +870,11 @@ body.main {
       &.active, &.complete {
         & .bs-wizard-stepnum .progress-img img {
           filter: invert(71%) sepia(91%) saturate(1588%) hue-rotate(3deg) brightness(106%) contrast(106%);
+          transition: filter 0.6s linear;
         }
       }
       &:first-child.active .progress .progress-bar {
-        width: 0%;
+        width: 70%;
       }
       &:last-child.active .progress .progress-bar {
         width: 100%;
@@ -885,6 +888,9 @@ body.main {
         }
         & a.bs-wizard-dot {
           pointer-events: none;
+        }
+        & .progress .progress-bar {
+          transition: width 0s;
         }
       }
       &:first-child .progress {

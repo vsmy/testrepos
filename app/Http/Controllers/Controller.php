@@ -26,5 +26,8 @@ class Controller extends BaseController
     public function policy() {
         return view('policy');
     }
+    public function projects($project_num) {
+        return view('projects', compact('project_num'));
+    }
 }
 

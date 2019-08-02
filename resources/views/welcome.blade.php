@@ -205,51 +205,11 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-youtube" role="tabpanel" aria-labelledby="v-pills-youtube-tab">
                         <div class="grid-container" id="youtube-videos">
-                            <div class="img1">
-                                <div class="card card-youtube">
-                                    <div class="flag yellow"></div>
-                                    <div class="shadow-box"></div>
-                                    <p class="caption-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                                    <span class="author"><img class="face-avatar" src="img/face-avatar.png" alt="">johndue</span>
-                                    <div class="play" data-video_id="" data-toggle="modal" data-target="#exampleModalCenter"><img src="img/play_button.svg" alt="" class="play_button"></div>
-                                </div>
-                            </div>
-                            <div class="img2">
-                                <div class="card card-youtube">
-                                    <div class="flag green"></div>
-                                    <div class="shadow-box"></div>
-                                    <p class="caption-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                                    <span class="author"><img class="face-avatar" src="img/face-avatar.png" alt="">johndue</span>
-                                    <div class="play" data-video_id="" data-toggle="modal" data-target="#exampleModalCenter"><img src="img/play_button.svg" alt="" class="play_button"></div>
-                                </div>
-                            </div>
-                            <div class="img3">
-                                <div class="card card-youtube">
-                                    <div class="flag salad"></div>
-                                    <div class="shadow-box"></div>
-                                    <p class="caption-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                                    <span class="author"><img class="face-avatar" src="img/face-avatar.png" alt="">johndue</span>
-                                    <div class="play" data-video_id="" data-toggle="modal" data-target="#exampleModalCenter"><img src="img/play_button.svg" alt="" class="play_button"></div>
-                                </div>
-                            </div>
-                            <div class="img4">
-                                <div class="card card-youtube">
-                                    <div class="flag blue"></div>
-                                    <div class="shadow-box"></div>
-                                    <p class="caption-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                                    <span class="author"><img class="face-avatar" src="img/face-avatar.png" alt="">johndue</span>
-                                    <div class="play" data-video_id="" data-toggle="modal" data-target="#exampleModalCenter"><img src="img/play_button.svg" alt="" class="play_button"></div>
-                                </div>
-                            </div>
-                            <div class="img5">
-                                <div class="card card-youtube">
-                                    <div class="flag purple"></div>
-                                    <div class="shadow-box"></div>
-                                    <p class="caption-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                                    <span class="author"><img class="face-avatar" src="img/face-avatar.png" alt="">johndue</span>
-                                    <div class="play" data-video_id="" data-toggle="modal" data-target="#exampleModalCenter"><img src="img/play_button.svg" alt="" class="play_button"></div>
-                                </div>
-                            </div>
+                            <div class="img1"></div>
+                            <div class="img2"></div>
+                            <div class="img3"></div>
+                            <div class="img4"></div>
+                            <div class="img5"></div>
                         </div>
                     </div>
 
@@ -290,18 +250,6 @@
             </div>
         </div>
     </section>
-    <script>
-        $(document).ready(function () {
-            $('.play').on('click', function () {
-                let video_id = this.dataset.video_id;
-                let iframe_video = `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${video_id}" allowfullscreen></iframe>`;
-                document.getElementById('youtube_video_container').innerHTML = iframe_video;
-            });
-            $('.modal').on('hidden.bs.modal', function () {
-                $('#youtube_video_container').html("");
-            });
-        });
-    </script>
 
     <script type="text/javascript">
         $('#myTab .tab-btn').on('click', function (e) {
@@ -347,7 +295,9 @@
         });
         $(document).ready(function () {
             getphoto();
+            inputYoutube();
             // getYoutube();
+            // getChannel();
             getAllposts();
             // $('#instagram_container').imagefill();
         });
@@ -364,17 +314,42 @@
             }
         }
         function inputYoutube(data) {
-            console.log(data);
-            $container_selector_i = "#youtube-videos";
-            $frame_holders = $($container_selector_i).children();
-            for (var i = 0; i < data.items.length; i++) {
-                $($frame_holders[i]).find('.card').css('background-image',  'url("' + data.items[i].snippet.thumbnails.high.url + '")');
-                $($frame_holders[i]).find('.play').attr('data-video_id', data.items[i].id.videoId);
-                $($frame_holders[i]).find('.caption-text').text( data.items[i].snippet.title);
-            }
+            fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyBjHKpeOy52O1oeGZo_JsVBdkF9GG7gb9s&channelId=UC6RUthnVTLdmlCvSDs7_vzw&part=snippet,id&order=date&maxResults=5&type=video')
+                .then(response => response.json())
+                .then(data => {
+                    var videos = data;
+                    fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyBjHKpeOy52O1oeGZo_JsVBdkF9GG7gb9s&channelId=UC6RUthnVTLdmlCvSDs7_vzw&part=snippet,id&maxResults=2&type=channel')
+                        .then(response => response.json())
+                        .then(data => {
+                            var channel = data;
+                            console.log(videos, 'videos');
+                            console.log(channel, 'channel');
+                            $container_selector_i = "#youtube-videos";
+                            $frame_holders = $($container_selector_i).children();
+                            for (var i = 0; i < videos.items.length; i++) {
+                                $($frame_holders[i]).html("\n" +
+                                    "<div class=\"card card-youtube\" style=\'background-image: url(\"" + videos.items[i].snippet.thumbnails.high.url + "\")'>\n" +
+                                    "    <div class=\"flag \" style='background-color: rgba(" + Math.floor(Math.random()*255) + ", " + Math.floor(Math.random()*255) + ", " + Math.floor(Math.random()*255) + ", 0.9)'\"></div>\n" +
+                                    "    <div class=\"shadow-box\"></div>\n" +
+                                    "    <p class=\"caption-text\">" + videos.items[i].snippet.title + "</p>\n" +
+                                    "    <span class=\"author\"><img class=\"face-avatar\" src=\"" + channel.items[0].snippet.thumbnails.default.url + "\" alt=\"\">" + channel.items[0].snippet.channelTitle + "</span>\n" +
+                                    "    <div class=\"play\" data-video_id=\"" + videos.items[i].id.videoId +"\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\"><img src=\"img/play_button.svg\" alt=\"\" class=\"play_button\"></div>\n" +
+                                    "</div>");
+                            }
+                        });
+                });
         }
+        $(document).ready(function () {
+            $('.play').on('click', function () {
+                let video_id = this.dataset.video_id;
+                let iframe_video = `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${video_id}" allowfullscreen></iframe>`;
+                document.getElementById('youtube_video_container').innerHTML = iframe_video;
+            });
+            $('.modal').on('hidden.bs.modal', function () {
+                $('#youtube_video_container').html("");
+            });
+        });
         function inputWp(data) {
-            console.log(data);
             $container_selector_i = "#wp-posts";
             $frame_holders = $($container_selector_i).children();
             for (var i = 0; i < data.length; i++) {
@@ -404,10 +379,17 @@
                 });
         }
         function getYoutube() {
-            fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyBjHKpeOy52O1oeGZo_JsVBdkF9GG7gb9s&channelId=UC6RUthnVTLdmlCvSDs7_vzw&part=snippet,id&order=date&maxResults=5')
+            fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyBjHKpeOy52O1oeGZo_JsVBdkF9GG7gb9s&channelId=UC6RUthnVTLdmlCvSDs7_vzw&part=snippet,id&order=date&maxResults=5&type=video')
                 .then(response => response.json())
                 .then(data => {
-                    inputYoutube(data);
+                    console.log(data, 'videos');
+                });
+        }
+        function getChannel() {
+            fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyBjHKpeOy52O1oeGZo_JsVBdkF9GG7gb9s&channelId=UC6RUthnVTLdmlCvSDs7_vzw&part=snippet,id&maxResults=2&type=channel')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data, 'channel');
                 });
         }
         function getAllposts() {

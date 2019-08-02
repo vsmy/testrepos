@@ -138,12 +138,32 @@
         </div>
     </section>
     <script>
-        let progressPoints = $('.bs-wizard').children();
-        var i = 1;
-        let progressTimer = setInterval(function () {
-            if (i > 3) i = 0;
-            console.log(i);
-            i++;
-        }, 5000);
+        progressTimer();
+
+        function progressTimer () {
+            let progressPoints = $('.bs-wizard').children();
+            var i = 0;
+            // for (var i = 0; i < 4; i++) {
+            //     $(progressPoints[i]).removeClass('disabled').addClass('active');
+            //     setTimeout(function fun(){ $(progressPoints[i]).removeClass('active').addClass('complete');
+            //     } , 1000);
+            // }
+            setInterval(function () {
+                if (i > 3) {
+                    for (k = 0; k < progressPoints.length; k++) {
+                        $(progressPoints[k]).removeClass('active').removeClass('complete').addClass('disabled');
+                    }
+                    i = 0;
+                } else {
+                    if (i > 0) {
+                        $(progressPoints[i-1]).removeClass('active').addClass('complete');
+                    }
+                    setTimeout(function () {
+                        $(progressPoints[i]).removeClass('disabled').addClass('active');
+                        i++;
+                    }, 600);
+                }
+            }, 5000);
+        }
     </script>
 @stop

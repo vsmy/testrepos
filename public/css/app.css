@@ -622,7 +622,7 @@ a:hover .images-instagram {
   opacity: 0.5;
 }
 
-body.main {
+body .main {
   font-family: Futura-Medium !important;
 }
 
@@ -1601,9 +1601,10 @@ body.main {
 }
 
 .bakgrund .bs-wizard .bs-wizard-step .progress .progress-bar {
+  transition: width 0.6s linear;
   width: 0px;
   box-shadow: none;
-  background: #fbe8aa;
+  background: #FFCA00;
 }
 
 .bakgrund .bs-wizard .bs-wizard-step.complete .progress .progress-bar {
@@ -1618,10 +1619,13 @@ body.main {
 .bakgrund .bs-wizard .bs-wizard-step.complete .bs-wizard-stepnum .progress-img img {
   -webkit-filter: invert(71%) sepia(91%) saturate(1588%) hue-rotate(3deg) brightness(106%) contrast(106%);
           filter: invert(71%) sepia(91%) saturate(1588%) hue-rotate(3deg) brightness(106%) contrast(106%);
+  transition: -webkit-filter 0.6s linear;
+  transition: filter 0.6s linear;
+  transition: filter 0.6s linear, -webkit-filter 0.6s linear;
 }
 
 .bakgrund .bs-wizard .bs-wizard-step:first-child.active .progress .progress-bar {
-  width: 0%;
+  width: 70%;
 }
 
 .bakgrund .bs-wizard .bs-wizard-step:last-child.active .progress .progress-bar {
@@ -1638,6 +1642,10 @@ body.main {
 
 .bakgrund .bs-wizard .bs-wizard-step.disabled a.bs-wizard-dot {
   pointer-events: none;
+}
+
+.bakgrund .bs-wizard .bs-wizard-step.disabled .progress .progress-bar {
+  transition: width 0s;
 }
 
 .bakgrund .bs-wizard .bs-wizard-step:first-child .progress {

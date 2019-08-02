@@ -20,3 +20,5 @@ Route::get('/about', 'Controller@about')            ->name('about');
 
 Route::get('/api/instagram/{quntity}', 'PublicController@getInstagram');
 
+Route::get('/projects/{project_num}', 'Controller@projects');
+
