@@ -3,23 +3,93 @@
     height: 100%;
   }
 }
+@media (max-width: 1362px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr 0.25fr 0.13fr 1fr 0.13fr 0.25fr 0.75fr 0.25fr;
+    grid-template-rows: 0.66fr 0.33fr 0.13fr 0.54fr 0.46fr;
+    grid-template-areas:
+            "img1 img1 . . . . . img4 img4"
+            "img1 img1 . . img3 . . img4 img4"
+            ". . . . img3 . . . ."
+            ". img2 img2 . img3 . img5 img5 ."
+            ". img2 img2 . . . img5 img5 .";
+  }
+}
 
-@media (max-width: 1440px) {
+@media (max-width: 1216px) {
+  .container-wider .tabs {
+    & .tab-content {
+      margin-top: -120px;
+    }
+    & .button-block.see-all {
+      margin-top: auto;
+    }
+  }
+  .grid-container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 0.13fr 1fr 1.5fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.13fr 1fr 0.13fr 1fr;
+    grid-template-areas:
+            ". . . . . . ."
+            "img2 img2 . . . img1 img1"
+            ". . . . . . ."
+            ". img4 img4 . img3 img3 ."
+            ". . . . . . ."
+            "img6 img6 . . . img5 img5";
+  }
 
+  .garden-section .container .main-content-text .instagram-info {
+    padding: 50px 0 0 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.13fr 0.37fr 0.26fr 0.37fr 0.13fr 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.13fr 1fr;
+    grid-template-areas: "img1 img1 . . . . . img4 img4" "img1 img1 . img3 img3 img3 . img4 img4" ". . . img3 img3 img3 . . ." ". . . . . . . . ." ". img2 img2 img2 . img5 img5 img5 .";
+  }
+  .tabs .button-block.see-all {
+    margin: unset;
+  }
 }
 
 @media (max-width: 992px) {
-  .garden-section img.big-map-pic {
-    width: 100%;
+  .full-screen.policy-header {
+    padding: 180px 0 50px 0;
+  }
+  .navbar {
+    max-height: 54px;
+    & .navbar-collapse .navbar-nav .nav-item {
+      margin: auto;
+    }
+
   }
   .garden-section {
     height: 100%;
-  }
-  .garden-section .row.main-content-text {
-
-    background: url(/img/tree.png);
-    background-repeat: no-repeat;
-    background-position: 0% 31%
+    & img.big-map-pic {
+      width: 100%;
+    }
+    & .row.main-content-text {
+      background: none;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 30px 0px;
+      & p {
+        font-size: 1.10rem;
+      }
+      & h1 {
+        font-size: 2rem;
+      }
+      & .instagram-info {
+        padding: 0;
+      }
+      & .popup-area {
+        display: none;
+      }
+    }
   }
 
   .nav-links li {
@@ -29,21 +99,48 @@
   .navbar {
     flex-direction: row-reverse;
   }
-  .garden-section .main-content-text {
-    justify-content: flex-start;
-    align-items: center;
-    padding: 30px 0px;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.66fr 0.33fr 0.33fr 0.33fr 0.66fr;
+    grid-template-rows: 1fr 0.13fr 1fr 0.13fr 1fr;
+    grid-template-areas:
+            "img1 img1 . img4 img4"
+            ". . . . ."
+            ". img3 img3 img3 ."
+            ". . . . ."
+            "img2 img2 . img5 img5";
+  }
+  .grid-container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 0.13fr 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 0.13fr 1fr 0.13fr 1fr;
+    grid-template-areas:
+            "img2 img2 . . . img1 img1"
+            ". . . . . . ."
+            ". img4 img4 . img3 img3 ."
+            ". . . . . . ."
+            "img6 img6 . . . img5 img5";
+  }
+  .container-wider .tabs .tab-content {
+    margin-top: auto;
   }
 
-  .garden-section .main-content-text p {
-    font-size: 1.10rem;
+  .bakgrund {
+    & .progress_bar {
+      & .progress-line {
+        & .progress-current {
+          width: 20%;
+        }
+      }
+    }
   }
-  .garden-section .main-content-text h1 {
-    font-size: 2rem;
-  }
-
-
+  //.bakgrund .progress_bar .progress-line .progress-current {
+  //  width: 20%;
+  //}
 }
+
+
 
 @media (max-width: 767px) {
   .garden-section .row.main-content-text {
@@ -69,26 +166,157 @@
   .garden-section .main-content-text .instagram-info p {
     text-align: center;
   }
+
+  .grid-container {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .img1 {
+      margin-right: -40%;
+    }
+    & .img2 {
+      margin-left: -40%;
+    }
+    & .img4 {
+      margin-right: -40%;
+    }
+    & .img5 {
+      margin-left: -40%;
+    }
+  }
+
+  .grid-container-2 {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .img1 {
+      margin-right: -40%;
+    }
+    & .img2 {
+      margin-left: -40%;
+    }
+    & .img4 {
+      margin-right: -40%;
+    }
+    & .img5 {
+      margin-left: -40%;
+    }
+  }
+  .container-wider .tabs .tab-toggler{
+    width: 519px;
+    height: 242px;
+    & .tab-btn {
+      width: 45px;
+      height: 45px;
+      &.tab-btn-instagram {
+        padding: 9px;
+        left: 101px;
+        top: 54px;
+        & .icon-instagram {
+          font-size: 1.7em;
+        }
+      }
+      &.tab-btn-youtube {
+        font-size: 1.2em;
+        padding: 13px 10px;
+        top: 114px;
+        left: 237px;
+      }
+      &.tab-btn-bookopened {
+        font-size: 1.2em;
+        padding: 13px 11px;
+        top: 54px;
+        right: 101px;
+      }
+    }
+    & .current_tab {
+      padding: 5px;
+      font-size: 1.5rem;
+    }
+    & .arrow {
+      width: 5%;
+      transform-origin: center -95px;
+      top: 61px;
+      left: 248px;
+    }
+  }
 }
 
 
 @media (max-width: 575px) {
+  .full-screen.policy-header {
+    & .main-content-text {
+      font-size: 1.5rem;
+    }
+  }
 
+  .main-info {
+    padding: 30px;
+  }
+
+  .container-wider .tabs .tab-toggler {
+    width: 320px;;
+    height: 105px;
+    & .current_tab {
+      font-size: 1rem;
+    }
+    & .arrow {
+      transform-origin: center -150px;
+      top: 95px;
+      left: 152px;
+      content: url("/img/arrow-reversed.svg");
+    }
+    & .tab-btn {
+      &.tab-btn-instagram {
+        left: 47px;
+        top: 3px;
+      }
+      &.tab-btn-youtube {
+        top: 48px;
+        left: 137px;
+      }
+      &.tab-btn-bookopened {
+        top: 3px;
+        right: 47px;
+      }
+    }
+  }
   .garden-section .row.main-content-text {
-    background-image: url(/img/tree.png);
     background-position: 0% 30%;
     background-size: auto;
   }
   footer .container {
     flex-wrap: wrap;
   }
+  .grid-container {
+    & .img1, & .img4 {
+      margin-right: -20%;
+    }
+    & .img2, & .img5 {
+      margin-left: -10%;
+    }
+  }
+  .grid-container-2 {
+    & .img1, & .img4 {
+      margin-right: -20%;
+    }
+    & .img2, & .img5 {
+      margin-left: -10%;
+    }
+  }
 }
 
 
 @media (max-width: 545px) {
 
-  .garden-section .row.main-content-text {
-    /* background-image: unset; */
+
+}
+@media (max-width: 460px) {
+  .footer .footer-line {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -101,9 +329,19 @@
   }
 }
 
-@media (max-width: 460px) {
-  .footer .footer-line {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 362px) {
+  .grid-container, .grid-container-2 {
+    & .img1, & .img2, & .img4, & .img5 {
+      margin: auto;
+    }
   }
 }
+
+@media (max-width: 330px) {
+  .container-wider .tabs .tab-toggler {
+    margin-left: -15px;
+  }
+}
+
+
+

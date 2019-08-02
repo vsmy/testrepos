@@ -22,11 +22,13 @@ class PublicController extends BaseController
             $client = new \GuzzleHttp\Client();
             $res = $client->get("https://api.instagram.com/v1/users/$user_id/media/recent?access_token=$access_token&count=$count");
             $instagram_response = json_decode($res->getBody())->data;
-
             foreach ($instagram_response as $key => $post) {
                 $result_post = (object)[
                     'image_url' => $post->images->standard_resolution->url,
                     'link' => $post->link,
+                    'caption' => $post->caption,
+                    'profile_picture' => $post->user->profile_picture,
+                    'username' => $post->user->username
                 ];
 
                 array_push($result, $result_post);

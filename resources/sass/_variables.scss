@@ -9,6 +9,8 @@
   font-style: normal;
 }
 
+
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -35,7 +37,99 @@
 }
 .icon-map_ico:before {
   content: "\e900";
-  color: #0F9078;
+  color: #FFCA00;
+}
+
+
+
+.futura {
+  font-family: Futura-Medium;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.font-16 {
+  font-size: 1rem;
+}
+
+.font-14 {
+  font-size: 0.875rem;
+}
+
+.font-18 {
+  font-size: 1.125rem;
+}
+
+.font-20 {
+  font-size: 1.25rem;
+}
+
+.font-21 {
+  font-size: 1.3125rem;
+}
+
+.font-22 {
+  font-size: 1.375rem;
+}
+
+.font-24 {
+  font-size: 1.5rem;
+}
+
+.font-32 {
+  font-size: 2rem;
+}
+
+.font-42 {
+  font-size: 2.625rem;
+}
+
+.font-48 {
+  font-size: 3rem;
+}
+
+.font-54 {
+  font-size: 3.375rem;
+}
+
+.intro-script {
+  font-family: Intro Script B Base;
+  font-weight: 400;
+}
+
+.halvetica-neue-medium {
+  font-family: Helvetica Neue;
+}
+
+.circe-bold {
+  font-family: Circe;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.circe-regular {
+  font-family: Circe;
+  font-weight: 400;
+}
+.gradient-inst {
+  font-size: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+  margin: 20px auto;
 }
 
 

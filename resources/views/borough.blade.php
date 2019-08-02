@@ -1,14 +1,5 @@
 @extends ('layout.app')
 
-@section('title')
-    Home page
-@stop
-
-@section('title')
-    Home page
-
-@stop
-
 <?php
 $regioncategories = [
     [
@@ -111,25 +102,138 @@ foreach ($regioncategories as $value) {
 ?>
 
 @section ('content')
-    <br>
-    <br>
-    <br>
-    <br>
+<section class="full-screen header">
+    <div class="container">
+        <div class="row h-100 main-content-text">
+            <div class="col-md-6">
+                <h1 class="futura font-54">
+                    <?= $select['name']?>
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
  <section>
-     <div class="container">
+     <div class="container borough">
          <div class="row">
              <div class="col-md-6 region-desc">
-                 <h1 class="text-center"> <?= $select['name']?></h1>
-                 <div class="text-center x-subtitle"> <?= $select['est']?></div>
-                 <div class="subtitle"> <?= $select['description']?></div>
+                 <h1 class="text-center font-32"> <?= $select['name']?></h1>
+                 <div class="text-center est-year font-18"> <?= $select['est']?></div>
+                 <div class="region-info font-18"> <?= $select['description']?></div>
              </div>
-             <div class="col-md-6">
+             <div class="col-md-6 region-map">
                  <img src="/images/region/<?= $select['id']?>.svg "alt="">
              </div>
          </div>
      </div>
  </section>
-
+<section>
+    <div class="street-bg">
+        <div class="main-content-text row container">
+            <div class="header">
+                <h1 class="futura font-42">Blog Posts</h1>
+            </div>
+            <div class="cards row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="card">
+                        <div class="flag blue"></div>
+                        <div class="picture">
+                            <img src="/img/church.png" alt="">
+                        </div>
+                        <div class="article">
+                            <div class="headliner">
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
+                            </div>
+                            <p class="main-text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="flag yellow"></div>
+                        <div class="picture">
+                            <img src="/img/card-1-picture.png" alt="">
+                        </div>
+                        <div class="article">
+                            <div class="headliner">
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
+                            </div>
+                            <p class="main-text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="flag yellow"></div>
+                        <div class="picture">
+                            <img src="/img/card-1-picture.png" alt="">
+                        </div>
+                        <div class="article">
+                            <div class="headliner">
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
+                            </div>
+                            <p class="main-text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="flag blue"></div>
+                        <div class="picture">
+                            <img src="/img/card-3-picture.png" alt="">
+                        </div>
+                        <div class="article">
+                            <div class="headliner">
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
+                            </div>
+                            <p class="main-text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="flag blue"></div>
+                        <div class="picture">
+                            <img src="/img/card-3-picture.png" alt="">
+                        </div>
+                        <div class="article">
+                            <div class="headliner">
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
+                            </div>
+                            <p class="main-text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-block see-all">
+                <button>
+                    <span class="button-text">Öppna bloggen </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 @endsection

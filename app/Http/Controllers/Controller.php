@@ -23,5 +23,8 @@ class Controller extends BaseController
     {
             return view('borough',compact ('region' ));
     }
+    public function policy() {
+        return view('policy');
+    }
 }
 
