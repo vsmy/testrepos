@@ -2,7 +2,7 @@
 @import 'variables';
 @import 'maps';
 
-body .main {
+body main {
   font-family: Futura-Medium !important;
 }
 
@@ -732,6 +732,7 @@ body .main {
   &:before {
     background-color: rgba(38, 41, 49, 0.85);
     content: "";
+    z-index: -1;
     display: block;
     top: 0;
     bottom: 0;
@@ -935,6 +936,11 @@ body .main {
   width: 25%;
 }
 
-
+.full-screen.header.projects-section {
+  padding: 275px 0;
+  max-height: unset;
+  & .projects-container {
+  }
+}
 
 @import 'media';
