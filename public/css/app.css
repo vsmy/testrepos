@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "icomoon";
-  src: url("/fonts/icomoon/icomoon.eot?iukclq");
-  src: url("/fonts/icomoon/icomoon.eot?iukclq#iefix") format("embedded-opentype"), url("/fonts/icomoon/icomoon.ttf?iukclq") format("truetype"), url("/fonts/icomoon/icomoon.woff?iukclq") format("woff"), url("/fonts/icomoon/icomoon.svg?iukclq#icomoon") format("svg");
+  src: url("/fonts/icomoon/icomoon.eot?v13eiq");
+  src: url("/fonts/icomoon/icomoon.eot?v13eiq#iefix") format("embedded-opentype"), url("/fonts/icomoon/icomoon.ttf?v13eiq") format("truetype"), url("/fonts/icomoon/icomoon.woff?v13eiq") format("woff"), url("/fonts/icomoon/icomoon.svg?v13eiq#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,32 +12,40 @@
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+  speak: none !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
   /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+.icon-doc:before {
+  content: "\E905" !important;
+}
+
+.icon-photo:before {
+  content: "\E904" !important;
 }
 
 .icon-book_opened:before {
-  content: "\E901";
+  content: "\E901" !important;
 }
 
 .icon-instagram:before {
-  content: "\E902";
+  content: "\E902" !important;
 }
 
 .icon-youtube:before {
-  content: "\E903";
+  content: "\E903" !important;
 }
 
 .icon-map_ico:before {
-  content: "\E900";
-  color: #FFCA00;
+  content: "\E900" !important;
+  color: #207dff;
 }
 
 .futura {
@@ -1112,7 +1120,7 @@ body main {
   width: 682px;
   height: 270px;
   margin: 0 auto;
-  background: url(/images/tab-panel.svg?2b144022ad196f25911bed7534e7da5d) no-repeat;
+  background: url("/img/tab-panel.svg") no-repeat;
   background-position-y: -35px;
   background-size: 100%;
   position: relative;
@@ -1699,6 +1707,256 @@ body main {
 .full-screen.header.projects-section {
   padding: 275px 0;
   max-height: unset;
+}
+
+.project-tabs {
+  background-image: url(/img/tabs-instagram-bg.png);
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-tabs .tab-toggler {
+  margin: 0 auto;
+  width: 682px;
+  height: 270px;
+  margin: 0 auto;
+  background: url("/img/tab-panel.svg") no-repeat;
+  background-position-y: -35px;
+  background-size: 100%;
+  position: relative;
+}
+
+.project-tabs .tab-toggler .current_tab {
+  text-align: center;
+  padding: 15px;
+  color: #262931;
+  font-family: Futura-Medium;
+  font-size: 2rem;
+}
+
+.project-tabs .tab-toggler .arrow {
+  position: absolute;
+  transition: 0.5s;
+  top: 112px;
+  left: 330px;
+  -webkit-transform-origin: center -150px;
+          transform-origin: center -150px;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+.project-tabs .tab-toggler .tab-btn {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.5px solid #C1C1C1;
+  line-height: 1;
+}
+
+.project-tabs .tab-toggler .tab-btn.tab-btn-bookopened {
+  padding: 24px;
+  left: 125px;
+  top: 75px;
+}
+
+.project-tabs .tab-toggler .tab-btn.tab-btn-bookopened .icon-gradient-inst {
+  color: #3E434E;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.project-tabs .tab-toggler .tab-btn.tab-btn-picture {
+  padding: 26px 23px;
+  bottom: 40px;
+  left: 300px;
+  color: #0B2349;
+  font-size: 1.7rem;
+}
+
+.project-tabs .tab-toggler .tab-btn.tab-btn-doc {
+  padding: 26px 23px;
+  top: 75px;
+  right: 125px;
+  color: #0B2349;
+  font-size: 1.7rem;
+}
+
+.project-tabs .tab-toggler [aria-selected=true] {
+  color: unset;
+  background-color: transparent !important;
+}
+
+.project-tabs .tab-toggler [aria-selected=true] .tab-btn {
+  background-color: white !important;
+}
+
+.project-tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-instagram .icon-gradient-inst {
+  background: linear-gradient(45deg, #FFDD20 3%, #FF4343 52%, #B762FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+}
+
+.project-tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-youtube {
+  color: #FF2020;
+}
+
+.project-tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-bookopened {
+  color: #FFCA00;
+}
+
+.project-tabs .tab-toggler .nav-link {
+  padding: 0 !important;
+}
+
+.project-tabs .card {
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  height: 295px;
+  width: 295px;
+  border-radius: 10px;
+}
+
+.project-tabs .card:hover .caption-text {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  overflow: unset;
+  text-overflow: unset;
+  display: unset;
+  line-height: unset;
+  /* fallback */
+  max-height: 168px;
+  /* fallback */
+  -webkit-line-clamp: unset;
+  /* number of lines to show */
+}
+
+.project-tabs .card .main {
+  width: 295px;
+  height: 295px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.project-tabs .card .caption-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 24px;
+  /* fallback */
+  max-height: 48px;
+  /* fallback */
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  position: absolute;
+  bottom: 75px;
+  margin: 0 20px;
+  font-family: Circe;
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+  z-index: 500;
+}
+
+.project-tabs .card.card-youtube {
+  height: 200px;
+}
+
+.project-tabs .tab-content {
+  margin-top: -230px;
+}
+
+.project-tabs .tab-content .modal .modal_custom {
+  max-width: 800px;
+}
+
+.project-tabs .tab-content .blog-card {
+  font-family: Futura-Medium;
+  width: 265px;
+  position: relative;
+  margin: 50px 10px 10px 10px;
+}
+
+.project-tabs .tab-content .blog-card .article {
+  color: #142D4C;
+  margin: 10px auto;
+}
+
+.project-tabs .tab-content .blog-card .article .headliner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-tabs .tab-content .blog-card .article .headliner .date {
+  color: #142D4C64;
+}
+
+.project-tabs .tab-content .blog-card .main-text {
+  margin: 10px auto;
+  color: #3D608B;
+}
+
+.project-tabs .tab-content .blog-card .flag {
+  position: absolute;
+  left: 30px;
+  top: -30px;
+  border-radius: 0px 0px 25px 25px;
+  width: 50px;
+  height: 70px;
+  z-index: 500;
+}
+
+.project-tabs .tab-content .blog-card .flag.yellow {
+  background-color: rgba(255, 202, 0, 0.9);
+}
+
+.project-tabs .tab-content .blog-card .flag.blue {
+  background-color: rgba(32, 125, 255, 0.9);
+}
+
+.project-tabs .tab-content .blog-card .flag.salad {
+  background-color: rgba(133, 239, 71, 0.9);
+}
+
+.project-tabs .tab-content .blog-card .flag.green {
+  background-color: rgba(0, 189, 86, 0.9);
+}
+
+.project-tabs .tab-content .blog-card .flag.purple {
+  background-color: rgba(136, 32, 255, 0.9);
+}
+
+.project-tabs .tab-content .blog-card .flag.orange {
+  background-color: rgba(255, 118, 32, 0.9);
+}
+
+.project-tabs .tab-content .blog-card .flag.pink {
+  background-color: rgba(255, 32, 240, 0.9);
+}
+
+.project-tabs .tab-content .modal .modal-footer {
+  background-color: #262931;
+}
+
+.project-tabs .tab-content .modal .modal-footer .button-block.see-all {
+  margin-top: auto;
+}
+
+.project-tabs .button-block.see-all {
+  margin-top: -165px;
 }
 
 @media (max-width: 1560px) {
