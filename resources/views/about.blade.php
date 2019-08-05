@@ -56,18 +56,50 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card card-youtube">
-                            <div class="flag yellow"></div>
-                            <div class="shadow-box"></div>
-                            <p class="caption-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>
-                            <span class="author"><img class="face-avatar" src="img/face-avatar.png" alt="">johndue</span>
-                            <div class="play" data-video_id="" data-toggle="modal" data-target="#exampleModalCenter"><img src="img/play_button.svg" alt="" class="play_button"></div>
+                            <div class="flag blue"></div>
+                            <div class="picture">
+                                <img src="img/church.png" class="preview" alt="">
+                            </div>
+                            <div class="article">
+                                <p class="main-text">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                </p>
+                                <span><img src="img/face-avatar.png" alt="">johndue</span>
+                            </div>
+                            <div class="play" data-video_id="" data-toggle="modal" data-target="#exampleModalCenter"><img src="img/play_button.svg" alt="" class="play_button center"></div>
                         </div>
+{{--                        <div class="card card-youtube">--}}
+{{--                            <div class="flag yellow"></div>--}}
+{{--                            <div class="shadow-box"></div>--}}
+{{--                            <p class="caption-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined</p>--}}
+{{--                            <span class="author"><img class="face-avatar" src="img/face-avatar.png" alt="">johndue</span>--}}
+{{--                            <div class="play" data-video_id="" data-toggle="modal" data-target="#exampleModalCenter"><img src="img/play_button.svg" alt="" class="play_button"></div>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="button-block see-all">
                     <button>
                         <span class="button-text">Öppna bloggen </span>
                     </button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal_custom" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div id="youtube_video_container" class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <div class="button-block see-all">
+                                <button data-dismiss="modal">
+                                    <span class="button-text">Close</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,17 +171,38 @@
     </section>
     <script>
         progressTimer();
+        inputYoutube();
+
+        function inputYoutube(data) {
+            fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyBjHKpeOy52O1oeGZo_JsVBdkF9GG7gb9s&channelId=UC6RUthnVTLdmlCvSDs7_vzw&part=snippet,id&order=date&maxResults=1&type=video')
+                .then(response => response.json())
+                .then(data => {
+                    var videos = data;
+                    fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyBjHKpeOy52O1oeGZo_JsVBdkF9GG7gb9s&channelId=UC6RUthnVTLdmlCvSDs7_vzw&part=snippet,id&maxResults=2&type=channel')
+                        .then(response => response.json())
+                        .then(data => {
+                            var channel = data;
+                            console.log(videos, 'videos');
+                            console.log(channel, 'channel');
+                            $('.preview').attr('src', videos.items[0].snippet.thumbnails.high.url);
+                            $('.play').attr('data-video_id', videos.items[0].id.videoId);
+                            $('.play').on('click', function () {
+                                let video_id = this.dataset.video_id;
+                                let iframe_video = `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${video_id}" allowfullscreen></iframe>`;
+                                document.getElementById('youtube_video_container').innerHTML = iframe_video;
+                            });
+                            $('.modal').on('hidden.bs.modal', function () {
+                                $('#youtube_video_container').html("");
+                            });
+                        });
+                });
+        }
 
         function progressTimer () {
             let progressPoints = $('.bs-wizard').children();
             var i = 0;
-            // for (var i = 0; i < 4; i++) {
-            //     $(progressPoints[i]).removeClass('disabled').addClass('active');
-            //     setTimeout(function fun(){ $(progressPoints[i]).removeClass('active').addClass('complete');
-            //     } , 1000);
-            // }
             setInterval(function () {
-                if (i > 3) {
+                if (i > 4) {
                     for (k = 0; k < progressPoints.length; k++) {
                         $(progressPoints[k]).removeClass('active').removeClass('complete').addClass('disabled');
                     }
@@ -159,11 +212,11 @@
                         $(progressPoints[i-1]).removeClass('active').addClass('complete');
                     }
                     setTimeout(function () {
-                        $(progressPoints[i]).removeClass('disabled').addClass('active');
+                        if (i < 4) $(progressPoints[i]).removeClass('disabled').addClass('active');
                         i++;
                     }, 600);
                 }
-            }, 5000);
+            }, 2000);
         }
     </script>
 @stop

@@ -81,6 +81,7 @@ body main {
   }
   &.card-youtube {
     height: auto;
+    background-repeat: no-repeat;
     & .play_button {
       position: absolute;
       right: 20px;
@@ -88,6 +89,11 @@ body main {
       z-index: 500;
       display: none;
       cursor: pointer;
+      &.center {
+        top: 35%;
+        left: 40%;
+        width: 100px;
+      }
     }
     &:hover {
       .play_button {
@@ -796,6 +802,9 @@ body main {
       }
     }
   }
+  & .modal_custom {
+    max-width: 800px;
+  }
 }
 
 .bakgrund {
@@ -878,7 +887,7 @@ body main {
         width: 70%;
       }
       &:last-child.active .progress .progress-bar {
-        width: 100%;
+        width: 30%;
       }
       &.disabled {
         & .bs-wizard-dot {
@@ -944,7 +953,7 @@ body main {
 }
 
 .project-tabs {
-  background-image: url(/img/tabs-instagram-bg.png);
+  background-image: url(/img/tabs-doc-bg.png);
   justify-content: space-between;
   background-repeat: no-repeat;
   align-items: center;
@@ -983,28 +992,23 @@ body main {
       border-radius: 50%;
       border: 0.5px solid #C1C1C1;
       line-height: 1;
-      &.tab-btn-bookopened {
-        padding: 24px;
-        left: 125px;
-        top: 75px;
-        & .icon-gradient-inst {
-          color: #3E434E;
-          margin: auto;
-          font-size: 2rem;
-        }
-      }
-      &.tab-btn-picture {
-        padding: 26px 23px;
-        bottom: 40px;
-        left: 300px;
-        color: #0B2349;
-        font-size: 1.7rem;
-      }
+      color: #0B2349;
       &.tab-btn-doc {
-        padding: 26px 23px;
+        padding: 26px;
         top: 75px;
         right: 125px;
-        color: #0B2349;
+        font-size: 1.7rem;
+      }
+      &.tab-btn-pic {
+        padding: 26px;
+        bottom: 40px;
+        left: 300px;
+        font-size: 1.7rem;
+      }
+      &.tab-btn-bookopened {
+        padding: 26px 23px;
+        left: 125px;
+        top: 75px;
         font-size: 1.7rem;
       }
     }
@@ -1013,20 +1017,14 @@ body main {
       background-color: transparent !important;
       & .tab-btn {
         background-color: white !important;
-        &.tab-btn-instagram {
-          & .icon-gradient-inst {
-            background: linear-gradient(45deg, #FFDD20 3%, #FF4343 52%, #B762FF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: #0B2349;
-            display: table;
-          }
+        &.tab-btn-doc {
+          color: #FFCA00;
         }
-        &.tab-btn-youtube {
-          color: #FF2020;
+        &.tab-btn-pic {
+          color: #009DFF;
         }
         &.tab-btn-bookopened {
-          color: #FFCA00;
+          color: #0A00FF;
         }
       }
     }
@@ -1081,7 +1079,7 @@ body main {
       color: white;
       z-index: 500;
     }
-    &.card-youtube {
+    &.card-pic {
       height: 200px;
     }
   }
@@ -1089,9 +1087,87 @@ body main {
 
 
   & .tab-content {
-    margin-top: -230px;
-    & .modal .modal_custom {
-      max-width: 800px;
+    margin-top: -150px;
+    .grid-container-3 {
+      min-height: 800px;
+      display: grid;
+      grid-template-columns: 1fr 0.13fr 1fr 0.13fr 1fr 0.13fr 1fr;
+      grid-template-rows: 0.47fr 1.65fr 0.46fr 0.45fr 0.66fr 1fr 0.27fr 0.64fr 0.54fr;
+      grid-template-areas:
+              "img1   .     .     .     .     .     ."
+              "img1   .     .     .     .     .     img2"
+              "img1   .     img3  .     .     .     img2"
+              ".      .     img3  .     img4  .     img2"
+              "img5   .     img3  .     img4  .     ."
+              "img5   .     img3  .     img4  .     img6"
+              "img5   .     .     .     img4  .     img6"
+              "img5   .     .     .     .     .     img6"
+              ".      .     .     .     .     .     img6";
+      & * {
+        position: relative;
+      }
+      & .img1 {
+        grid-area: img1;
+        width: 300px;
+      }
+      & .img2 {
+        grid-area: img2;
+        width: 300px;
+      }
+      & .img3 {
+        grid-area: img3;
+        width: 300px;
+      }
+      & .img4 {
+        grid-area: img4;
+        width: 300px;
+      }
+      & .img5 {
+        grid-area: img5;
+        width: 300px;
+      }
+      & .img6 {
+        grid-area: img6;
+        width: 300px;
+      }
+    }
+
+    .grid-container-4 {
+      min-height: 800px;
+      display: grid;
+      grid-template-columns: 1fr 0.8fr 1fr 0.8fr 1fr;
+      grid-template-rows: 150px 300px 350px;
+      grid-template-areas:
+              "img1   .     .     .     img2  "
+              "img1   .     img3  .     img2  "
+              ".      .     .     .     .      ";
+      & * {
+        position: relative;
+      }
+      & .img1 {
+        grid-area: img1;
+        width: 300px;
+      }
+      & .img2 {
+        grid-area: img2;
+        width: 300px;
+      }
+      & .img3 {
+        grid-area: img3;
+        width: 300px;
+      }
+      & .img4 {
+        grid-area: img4;
+        width: 300px;
+      }
+      & .img5 {
+        grid-area: img5;
+        width: 300px;
+      }
+      & .img6 {
+        grid-area: img6;
+        width: 300px;
+      }
     }
     & .blog-card {
       font-family: Futura-Medium;
@@ -1147,18 +1223,11 @@ body main {
         }
       }
     }
-    & .modal {
-      & .modal-footer {
-        background-color: #262931;
-        & .button-block.see-all {
-          margin-top: auto;
-        }
-      }
-    }
   }
   & .button-block.see-all {
     margin-top: -165px;
   }
 }
+
 
 @import 'media';

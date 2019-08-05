@@ -12,12 +12,12 @@
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
-  speak: none !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  line-height: 1 !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -722,6 +722,7 @@ body main {
 
 .card.card-youtube {
   height: auto;
+  background-repeat: no-repeat;
 }
 
 .card.card-youtube .play_button {
@@ -731,6 +732,12 @@ body main {
   z-index: 500;
   display: none;
   cursor: pointer;
+}
+
+.card.card-youtube .play_button.center {
+  top: 35%;
+  left: 40%;
+  width: 100px;
 }
 
 .card.card-youtube:hover .play_button {
@@ -1537,6 +1544,10 @@ body main {
   margin: 0 10px 0 0;
 }
 
+.street-bg .modal_custom {
+  max-width: 800px;
+}
+
 .bakgrund .main-info {
   padding: 100px 0 50px 0;
 }
@@ -1638,7 +1649,7 @@ body main {
 }
 
 .bakgrund .bs-wizard .bs-wizard-step:last-child.active .progress .progress-bar {
-  width: 100%;
+  width: 30%;
 }
 
 .bakgrund .bs-wizard .bs-wizard-step.disabled .bs-wizard-dot {
@@ -1710,7 +1721,7 @@ body main {
 }
 
 .project-tabs {
-  background-image: url(/img/tabs-instagram-bg.png);
+  background-image: url(/img/tabs-doc-bg.png);
   justify-content: space-between;
   background-repeat: no-repeat;
   align-items: center;
@@ -1757,33 +1768,27 @@ body main {
   border-radius: 50%;
   border: 0.5px solid #C1C1C1;
   line-height: 1;
-}
-
-.project-tabs .tab-toggler .tab-btn.tab-btn-bookopened {
-  padding: 24px;
-  left: 125px;
-  top: 75px;
-}
-
-.project-tabs .tab-toggler .tab-btn.tab-btn-bookopened .icon-gradient-inst {
-  color: #3E434E;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.project-tabs .tab-toggler .tab-btn.tab-btn-picture {
-  padding: 26px 23px;
-  bottom: 40px;
-  left: 300px;
   color: #0B2349;
-  font-size: 1.7rem;
 }
 
 .project-tabs .tab-toggler .tab-btn.tab-btn-doc {
-  padding: 26px 23px;
+  padding: 26px;
   top: 75px;
   right: 125px;
-  color: #0B2349;
+  font-size: 1.7rem;
+}
+
+.project-tabs .tab-toggler .tab-btn.tab-btn-pic {
+  padding: 26px;
+  bottom: 40px;
+  left: 300px;
+  font-size: 1.7rem;
+}
+
+.project-tabs .tab-toggler .tab-btn.tab-btn-bookopened {
+  padding: 26px 23px;
+  left: 125px;
+  top: 75px;
   font-size: 1.7rem;
 }
 
@@ -1796,20 +1801,16 @@ body main {
   background-color: white !important;
 }
 
-.project-tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-instagram .icon-gradient-inst {
-  background: linear-gradient(45deg, #FFDD20 3%, #FF4343 52%, #B762FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #0B2349;
-  display: table;
+.project-tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-doc {
+  color: #FFCA00;
 }
 
-.project-tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-youtube {
-  color: #FF2020;
+.project-tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-pic {
+  color: #009DFF;
 }
 
 .project-tabs .tab-toggler [aria-selected=true] .tab-btn.tab-btn-bookopened {
-  color: #FFCA00;
+  color: #0A00FF;
 }
 
 .project-tabs .tab-toggler .nav-link {
@@ -1870,16 +1871,96 @@ body main {
   z-index: 500;
 }
 
-.project-tabs .card.card-youtube {
+.project-tabs .card.card-pic {
   height: 200px;
 }
 
 .project-tabs .tab-content {
-  margin-top: -230px;
+  margin-top: -150px;
 }
 
-.project-tabs .tab-content .modal .modal_custom {
-  max-width: 800px;
+.project-tabs .tab-content .grid-container-3 {
+  min-height: 800px;
+  display: grid;
+  grid-template-columns: 1fr 0.13fr 1fr 0.13fr 1fr 0.13fr 1fr;
+  grid-template-rows: 0.47fr 1.65fr 0.46fr 0.45fr 0.66fr 1fr 0.27fr 0.64fr 0.54fr;
+  grid-template-areas: "img1   .     .     .     .     .     ." "img1   .     .     .     .     .     img2" "img1   .     img3  .     .     .     img2" ".      .     img3  .     img4  .     img2" "img5   .     img3  .     img4  .     ." "img5   .     img3  .     img4  .     img6" "img5   .     .     .     img4  .     img6" "img5   .     .     .     .     .     img6" ".      .     .     .     .     .     img6";
+}
+
+.project-tabs .tab-content .grid-container-3 * {
+  position: relative;
+}
+
+.project-tabs .tab-content .grid-container-3 .img1 {
+  grid-area: img1;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-3 .img2 {
+  grid-area: img2;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-3 .img3 {
+  grid-area: img3;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-3 .img4 {
+  grid-area: img4;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-3 .img5 {
+  grid-area: img5;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-3 .img6 {
+  grid-area: img6;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-4 {
+  min-height: 800px;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1fr 0.8fr 1fr;
+  grid-template-rows: 150px 300px 350px;
+  grid-template-areas: "img1   .     .     .     img2  " "img1   .     img3  .     img2  " ".      .     .     .     .      ";
+}
+
+.project-tabs .tab-content .grid-container-4 * {
+  position: relative;
+}
+
+.project-tabs .tab-content .grid-container-4 .img1 {
+  grid-area: img1;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-4 .img2 {
+  grid-area: img2;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-4 .img3 {
+  grid-area: img3;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-4 .img4 {
+  grid-area: img4;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-4 .img5 {
+  grid-area: img5;
+  width: 300px;
+}
+
+.project-tabs .tab-content .grid-container-4 .img6 {
+  grid-area: img6;
+  width: 300px;
 }
 
 .project-tabs .tab-content .blog-card {
@@ -1945,14 +2026,6 @@ body main {
 
 .project-tabs .tab-content .blog-card .flag.pink {
   background-color: rgba(255, 32, 240, 0.9);
-}
-
-.project-tabs .tab-content .modal .modal-footer {
-  background-color: #262931;
-}
-
-.project-tabs .tab-content .modal .modal-footer .button-block.see-all {
-  margin-top: auto;
 }
 
 .project-tabs .button-block.see-all {

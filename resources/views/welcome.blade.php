@@ -123,7 +123,7 @@
                     <span class="current_tab">Instagram</span>
                     <img src="/img/arrow.svg" alt="" class="arrow" id="arrow">
                     <a class="nav-link active" id="v-pills-instagram-tab" data-toggle="pill" href="#v-pills-instagram" role="tab" aria-controls="v-pills-instagram" aria-selected="true">
-                        <div id="isnt" class="tab-btn tab-btn-instagram act">
+                        <div class="tab-btn tab-btn-instagram act">
                             <i class="icon-instagram icon-gradient-inst"></i>
                         </div>
                     </a>
@@ -296,8 +296,6 @@
         $(document).ready(function () {
             getphoto();
             inputYoutube();
-            // getYoutube();
-            // getChannel();
             getAllposts();
             // $('#instagram_container').imagefill();
         });
@@ -322,8 +320,6 @@
                         .then(response => response.json())
                         .then(data => {
                             var channel = data;
-                            console.log(videos, 'videos');
-                            console.log(channel, 'channel');
                             $container_selector_i = "#youtube-videos";
                             $frame_holders = $($container_selector_i).children();
                             for (var i = 0; i < videos.items.length; i++) {
@@ -336,19 +332,18 @@
                                     "    <div class=\"play\" data-video_id=\"" + videos.items[i].id.videoId +"\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\"><img src=\"img/play_button.svg\" alt=\"\" class=\"play_button\"></div>\n" +
                                     "</div>");
                             }
+                            $('.play').on('click', function () {
+                                let video_id = this.dataset.video_id;
+                                let iframe_video = `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${video_id}" allowfullscreen></iframe>`;
+                                document.getElementById('youtube_video_container').innerHTML = iframe_video;
+                            });
+                            $('.modal').on('hidden.bs.modal', function () {
+                                $('#youtube_video_container').html("");
+                            });
                         });
                 });
         }
-        $(document).ready(function () {
-            $('.play').on('click', function () {
-                let video_id = this.dataset.video_id;
-                let iframe_video = `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${video_id}" allowfullscreen></iframe>`;
-                document.getElementById('youtube_video_container').innerHTML = iframe_video;
-            });
-            $('.modal').on('hidden.bs.modal', function () {
-                $('#youtube_video_container').html("");
-            });
-        });
+
         function inputWp(data) {
             $container_selector_i = "#wp-posts";
             $frame_holders = $($container_selector_i).children();
