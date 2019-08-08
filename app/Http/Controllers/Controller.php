@@ -6,6 +6,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\Mail;
 
 class Controller extends BaseController
 {
@@ -13,6 +14,18 @@ class Controller extends BaseController
 
     public function index()
     {
+        $to_name = 'Admin Name';
+        $to_email = "sergey.hural.test@gmail.com";
+        $data = [
+            "name" => "Data that should be",
+            "body" => "In a mail"
+        ];
+
+        // emails.mail - view in resources/views. Should be smthg like "email/contact_us"
+        Mail::send("emails.mail", $data, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)->subject("Laravel Test Mail");
+        });
+        dd(123);
         return view('welcome');
     }
     public function about()
