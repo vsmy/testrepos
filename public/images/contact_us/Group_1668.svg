@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170" height="133.428" viewBox="0 0 170 133.428">
+  <defs>
+    <filter id="Path_3923" x="0" y="0" width="170" height="133.428" filterUnits="userSpaceOnUse">
+      <feOffset dx="-10" dy="-5" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1668" data-name="Group 1668" transform="translate(-470.627 -481.79)">
+    <g transform="matrix(1, 0, 0, 1, 470.63, 481.79)" filter="url(#Path_3923)">
+      <path id="Path_3923-2" data-name="Path 3923" d="M605.778,486.79H515.246a33.373,33.373,0,0,0-8.656,1.177,34.346,34.346,0,0,0-25.963,33.446v39.068a34.527,34.527,0,0,0,3.982,16.375,12.387,12.387,0,0,0,1.635,3.037c1.4,1.872,2.8,3.509,4.207,5.152a35.444,35.444,0,0,0,24.8,10.058h14.04v13.563a1.5,1.5,0,0,0,.225.945v1.158c.242.245.242.477.475.707v.237c0,.233.235.465.467.935a.5.5,0,0,0,.467.467v.233a1.84,1.84,0,0,1,.7.467l.232.232c.235,0,.235,0,.7.468h0a.864.864,0,0,1,.7.235v.232h.935v.237h2.812a.977.977,0,0,0,.69-.237h.47s.475-.232.475-.467h.235c.232,0,.467-.233.7-.468h.233a3.286,3.286,0,0,1,.935-.7L558.755,595.1h47.024a34.9,34.9,0,0,0,34.849-34.621V521.413c0-18.949-15.909-34.623-34.849-34.623Z" transform="translate(-470.63 -481.79)" fill="#f2c000" fill-rule="evenodd"/>
+    </g>
+    <g id="Group_1669" data-name="Group 1669" transform="translate(535.027 521.99)">
+      <path id="Path_3927" data-name="Path 3927" d="M305.8,375.983v-31.6l-17.929,15.8Z" transform="translate(-253.803 -341.784)" fill="#fff"/>
+      <path id="Path_3928" data-name="Path 3928" d="M281.909,366.419l-5.119-4.511-17.929,15.8h46.1l-17.929-15.8Z" transform="translate(-255.909 -340.907)" fill="#fff"/>
+      <path id="Path_3929" data-name="Path 3929" d="M304.957,341.908h-46.1l23.048,20.31Z" transform="translate(-255.909 -341.908)" fill="#fff"/>
+      <path id="Path_3930" data-name="Path 3930" d="M256.108,344.385v31.6l17.929-15.8Z" transform="translate(-256.108 -341.784)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

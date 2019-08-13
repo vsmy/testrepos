@@ -2032,6 +2032,27 @@ body main {
   margin-top: -165px;
 }
 
+.contact_us {
+  padding: 162px 0 162px 0;
+  background: url(/images/contact_us/Group_1666.svg) calc(113% - 350px) 70px no-repeat, url(/images/contact_us/Group_1664.svg) calc(108% - 350px) 15px no-repeat, url(/images/contact_us/Group_1668.svg) calc(103% - 350px) 116px no-repeat;
+}
+
+button {
+  cursor: pointer !important;
+}
+
+.autoHide {
+  height: 75px;
+  overflow: hidden;
+  transition: all 0.4s ease-in;
+}
+
+.autoHide:hover {
+  transition: all 0.4s ease-in;
+  height: unset;
+  overflow: unset;
+}
+
 @media (max-width: 1560px) {
   .fullscreen-bg {
     height: 100%;

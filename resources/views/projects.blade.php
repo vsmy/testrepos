@@ -1,92 +1,27 @@
 @extends('layout.app')
 
-<?php
-    $projects = [
-        [
-            'header-bg' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/park.jpg',
-            'project-name' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/Nya-Torget-365-utan-bakgrund.png',
-            'project-info' => 'Här kan du läsa om projektet Nya Torget 365 i Sundbyberg. Ett skolprojekt i samarbete med Ängskolan med målet att öka förståelsen för stadsutveckling och främja jämställdhet i branschen. <br> För att göra projektet övergripligt och tydligt för ungdomarna skapade vi en infografik som sammanfattar uppdraget.',
-            'slider' => '?',
-            'photos' => [
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-                [
-                    'date' => '2017-03-22',
-                    'description' => 'En första leverans av material till skolan packas upp. Ett gäng roliga och nya verktyg att arbeta med är en motivationshöjare!',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview-2.jpg'
-                ],
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-                [
-                    'date' => '2017-03-17',
-                    'description' => 'Vi möter eleverna för första gången i skolans aula och presenterar projektet. 143 elever är många att samarbeta med.',
-                    'url' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/preview.jpg'
-                ],
-            ]
-        ]
-    ];
-?>
-
 @section('content')
-<section class="full-screen header projects-section">
+
+<section class="full-screen header projects-section" style="z-index: 0">
     <div class="container projects-container">
         <div class="row h-100 main-content-text">
             <div class="col-md-6">
                 <h1 class="futura font-54">
-                    Nya Torget 365
+                        {{ $data->name }}
                 </h1>
                 <p class="font-18">
-                    Här kan du läsa om projektet Nya Torget 365 i Sundbyberg. Ett skolprojekt i samarbete med Ängskolan med målet att öka förståelsen för stadsutveckling och främja jämställdhet i branschen.
+                   {{ $data->title }}
                     <br>
-                    För att göra projektet övergripligt och tydligt för ungdomarna skapade vi en infografik som sammanfattar uppdraget.
+                    {{ $data->description }}
                 </p>
             </div>
         </div>
         <div class="button-block see-all">
-            <button>
-                <span class="button-text">Se uppdraget här</span>
-            </button>
+            <a href="{{  $data->good_place_link  }}">
+                <button>
+                    <span class="button-text">Se uppdraget här</span>
+                </button>
+            </a>
         </div>
     </div>
 </section>
@@ -114,58 +49,32 @@
             </div>
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
-                    <div class="grid-container-4" id="wp-posts">
-                        <div class="img1">
-                            <a class="post-link" href="#" target="_blank">
+                    <div class="grid-container" id="wp-posts">
+
+                        @foreach( $data->slider as  $slider)
+                        <div class="img{{$slider['id']}}">
+                            <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
                                 <div class="blog-card">
                                     <div class="flag yellow"></div>
                                     <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
+                                        <img class="w-100" src="{{ $slider['img'] }}" alt="">
                                     </div>
                                     <div class="article">
                                         <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
+                                            <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
                                         </div>
-                                        <p class="main-text">Lorem ipsum</p>
+                                        <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="img2">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="img3">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+
+                        @endforeach
+                    </div>
+                    <div class="button-block see-all m-auto">
+                        <button>
+                            <span class="button-text">Se mer</span>
+                        </button>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="v-pills-pic" role="tabpanel" aria-labelledby="v-pills-pic-tab">
@@ -273,6 +182,11 @@
                             </a>
                         </div>
                     </div>
+                    <div class="button-block see-all m-auto">
+                        <button>
+                            <span class="button-text">Se mer</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="v-pills-doc" role="tabpanel" aria-labelledby="v-pills-doc-tab">
                     <div class="grid-container" id="insta-images">
@@ -362,13 +276,14 @@
                             </a>
                         </div>
                     </div>
+                    <div class="button-block see-all m-auto">
+                        <button>
+                            <span class="button-text">Se mer</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="button-block see-all">
-                <button>
-                    <span class="button-text">Se mer</span>
-                </button>
-            </div>
+
         </div>
     </div>
     </section>
@@ -380,7 +295,7 @@
     $('.tab-btn-doc').on('click', function (e) {
         $('.tabs').css('background-image', 'url(/img/tabs-doc-bg.png)');
         $('.current_tab').text("Pressklipp");
-        $('.button-block.see-all').css('display', 'none');
+        // $('.button-block.see-all').css('display', 'none');
         $('.act').removeClass('act');
         $(this).addClass("act");
 
@@ -388,14 +303,14 @@
     $('.tab-btn-pic').on('click', function (e) {
         $('.tabs').css('background-image', 'url(/img/tabs-pic-bg.png)');
         $('.current_tab').text("Galleriet");
-        $('.button-block.see-all').css('display', 'none');
+        // $('.button-block.see-all').css('display', 'none');
         $('.act').removeClass('act');
         $(this).addClass("act");
     });
     $('.tab-btn-bookopened').on('click', function (e) {
         $('.tabs').css('background-image', 'url(/img/tabs-bloggen-bg.png)');
         $('.current_tab').text("Bloggen");
-        $('.button-block.see-all').css('display', 'block');
+        // $('.button-block.see-all').css('display', 'block');
         $('.act').removeClass('act');
         $(this).addClass("act");
     });

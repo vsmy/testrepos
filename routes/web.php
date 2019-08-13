@@ -14,6 +14,9 @@ Route::get('/',                'Controller@index')            ->name('welcome');
 
 Route::get('/policy',           'Controller@policy')            ->name('policy');
 
+Route::get('/contact-us',           'Controller@contact_us')            ->name('contact');
+Route::post('/contact-us',           'Controller@sendMail');
+
 Route::get('/borough/{region}', 'Controller@borough')            ->name('borough');
 
 Route::get('/about', 'Controller@about')            ->name('about');

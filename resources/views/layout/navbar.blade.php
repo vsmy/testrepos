@@ -36,8 +36,8 @@
                     Projekt
                 </a>
                 <div class="dropdown-menu" aria-labelledby="Projekt">
-                    <a class="dropdown-item" href="/projects/1">Projekt1</a>
-                    <a class="dropdown-item" href="/projects/2">Projekt2</a>
+                    <a class="dropdown-item" href="/projects/1">NYA TORGET 365</a>
+                    <a class="dropdown-item" href="/projects/2">RASTA</a>
                 </div>
 
             </li>
@@ -45,7 +45,8 @@
                 <a href="{{ route('about') }}">Om oss</a>
             </li>
             <li class="nav-item">
-                Kontakt
+                <a href="{{ route('contact') }}">Kontakt</a>
+
             </li>
         </ul>
     </div>
