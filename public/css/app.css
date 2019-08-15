@@ -1004,6 +1004,16 @@ body main {
   width: 100%;
 }
 
+.big-map.lm:before,
+.street-bg.lm:before {
+  background-color: #d7d7d7d9;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
 .big-map .main-content-text,
 .street-bg .main-content-text {
   display: flex;
@@ -2051,6 +2061,29 @@ button {
   transition: all 0.4s ease-in;
   height: unset;
   overflow: unset;
+}
+
+.borough_section {
+  z-index: -1;
+  position: relative;
+  margin-top: -114px;
+  background-image: url(/img/stairs.png);
+  background-size: cover;
+  background-position: center 15%;
+}
+
+.borough_section:before {
+  background-color: rgba(38, 41, 49, 0.85);
+  content: "";
+  z-index: -1;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 @media (max-width: 1560px) {
