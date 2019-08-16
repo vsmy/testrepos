@@ -25,3 +25,6 @@ Route::get('/api/instagram/{quntity}', 'PublicController@getInstagram');
 
 Route::get('/projects/{project_num}', 'Controller@projects');
 
+
+Route::get('/getPostBlog/{type}', 'WPController@getPostBlog');
+
