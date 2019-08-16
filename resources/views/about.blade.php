@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 card-youtube-container">
                         <div class="card card-youtube">
                             <div class="flag blue"></div>
                             <div class="picture">

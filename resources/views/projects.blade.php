@@ -16,263 +16,134 @@
                 </p>
             </div>
         </div>
-        <a href="{{  $data->good_place_link  }}" class="btn-yellow">
-            Se uppdraget här
-        </a>
+        <div class="btn-container col-md-6">
+
+            <a href="{{  $data->good_place_link  }}" class="btn-yellow">
+                Se uppdraget här
+            </a>
+        </div>
     </div>
 </section>
 <section>
-    <div class="container container-wider">
+    <div class="container-wider">
         <div class="project-tabs">
-            <div class="tab-toggler nav flex-column nav-pills" id="myTab"  id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <span class="current_tab">Bloggen</span>
-                <img src="/img/arrow.svg" alt="" class="arrow" id="arrow">
-                <a class="nav-link active" id="v-pills-bookopened-tab" data-toggle="pill" href="#v-pills-bookopened" role="tab" aria-controls="v-pills-bookopened" aria-selected="true">
-                    <div class="tab-btn tab-btn-bookopened act">
-                        <i class="icon-book_opened"></i>
-                    </div>
-                </a>
-                <a class="nav-link" id="v-pills-doc-tab" data-toggle="pill" href="#v-pills-doc" role="tab" aria-controls="v-pills-doc" aria-selected="false">
-                    <div class="tab-btn tab-btn-doc">
-                        <i class="icon-doc"></i>
-                    </div>
-                </a>
-                <a class="nav-link" id="v-pills-pic-tab" data-toggle="pill" href="#v-pills-pic" role="tab" aria-controls="v-pills-pic" aria-selected="false">
-                    <div class="tab-btn tab-btn-pic">
-                        <i class="icon-photo"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
-                    <div class="grid-container-proj gc{{count($data->slider)}} wb" id="wp-posts">
+            <div class="container">
 
-                    @foreach( $data->slider as  $slider)
-
-                        <div class="img{{$slider['id']}} mx-auto">
-                            <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img class="w-100" src="{{ $slider['img'] }}" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
-                                        </div>
-                                        <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
-                                    </div>
-                                </div>
-                            </a>
+                <div class="tab-toggler nav flex-column nav-pills" id="myTab"  id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <span class="current_tab">Bloggen</span>
+                    <img src="/img/arrow.svg" alt="" class="arrow" id="arrow">
+                    <a class="nav-link active" id="v-pills-bookopened-tab" data-toggle="pill" href="#v-pills-bookopened" role="tab" aria-controls="v-pills-bookopened" aria-selected="true">
+                        <div class="tab-btn tab-btn-bookopened act">
+                            <i class="icon-book_opened"></i>
                         </div>
-
-                        @endforeach
-                        <div class="btn-1 mx-auto">
-                            <a href="http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/infographic_A3.jpg" class="btn-yellow">
-                                Se mer
-                            </a>
+                    </a>
+                    <a class="nav-link" id="v-pills-doc-tab" data-toggle="pill" href="#v-pills-doc" role="tab" aria-controls="v-pills-doc" aria-selected="false">
+                        <div class="tab-btn tab-btn-doc">
+                            <i class="icon-doc"></i>
                         </div>
-                    </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-pic-tab" data-toggle="pill" href="#v-pills-pic" role="tab" aria-controls="v-pills-pic" aria-selected="false">
+                        <div class="tab-btn tab-btn-pic">
+                            <i class="icon-photo"></i>
+                        </div>
+                    </a>
                 </div>
-                <div class="tab-pane fade" id="v-pills-pic" role="tabpanel" aria-labelledby="v-pills-pic-tab">
-                    <div class="grid-container-3" id="pic-videos">
-                        <div class="img1">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
+                        <div class="grid-container-proj gc{{count($data->slider1)}} wb" id="wp-posts">
+
+                            @foreach( $data->slider1 as  $slider)
+
+                                <div class="img{{$slider['id']}} img mx-auto">
+                                    <a class="post-link" target="_blank">
+                                        <div class="blog-card">
+                                            <div class="flag yellow"></div>
+                                            <div class="picture">
+                                                <img class="w-100" src="{{ $slider['img'] }}" alt="">
+                                            </div>
+                                            <div class="article">
+                                                <div class="headliner">
+                                                    <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                                </div>
+                                                <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
+                                                <a href="{{ $slider['sell_detail_link'] }}" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                                            </div>
                                         </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="img2">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="img3">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="img4">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="img5">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="img6">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
+
+                            @endforeach
+                            <div class="btn-1 mx-auto">
+                                <a href="http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/infographic_A3.jpg" class="btn-yellow">
+                                    Se mer
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-doc" role="tabpanel" aria-labelledby="v-pills-doc-tab">
-                    <div class="grid-container" id="insta-images">
-                        <div class="img1">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
+                    <div class="tab-pane fade" id="v-pills-pic" role="tabpanel" aria-labelledby="v-pills-pic-tab">
+                        <div class="grid-container-proj gc{{count($data->slider2)}}" id="wp-posts">
+
+                            @foreach( $data->slider2 as  $slider)
+
+                                <div class="img{{$slider['id']}} img mx-auto">
+                                    <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
+                                        <div class="blog-card">
+                                            <div class="flag yellow"></div>
+                                            <div class="picture">
+                                                <img class="w-100" src="{{ $slider['img'] }}" alt="">
+                                            </div>
+                                            <div class="article">
+                                                <div class="headliner">
+                                                    <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                                </div>
+                                                <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
+                                            </div>
                                         </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
+
+                            @endforeach
                         </div>
-                        <div class="img2">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-doc" role="tabpanel" aria-labelledby="v-pills-doc-tab">
+                        <div class="grid-container-proj gc{{count($data->slider3)}}" id="wp-posts">
+
+                            @foreach( $data->slider3 as  $slider)
+
+                                <div class="img{{$slider['id']}} img mx-auto">
+                                    <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
+                                        <div class="blog-card">
+                                            <div class="flag yellow"></div>
+                                            <div class="picture">
+                                                <img class="w-100" src="{{ $slider['img'] }}" alt="">
+                                            </div>
+                                            <div class="article">
+                                                <div class="headliner">
+                                                    <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                                </div>
+                                                <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
+                                            </div>
                                         </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="img3">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="img4">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="img5">
-                            <a class="post-link" href="#" target="_blank">
-                                <div class="blog-card">
-                                    <div class="flag yellow"></div>
-                                    <div class="picture">
-                                        <img src="/img/blog-card-picture-5.png" alt="">
-                                    </div>
-                                    <div class="article">
-                                        <div class="headliner">
-                                            <h2 class="title font-24 bold">Lorem Ipsum</h2>
-                                            <span class="date font-16">2019-07-15</span>
-                                        </div>
-                                        <p class="main-text">Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </a>
+
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+    </section>
+    <section>
+        <div class="sponsor-section">
+            <div class="container">
+                <p class="sponsor-title mx-auto">Projektets sponsorer</p>
+                <div class="sponsor-picture-container mx-auto">
+                    <img src="{{$data->sponsors}}" alt="" class="sponsor-picture">
+                </div>
+            </div>
+        </div>
     </section>
 <script type="text/javascript">
     $('#myTab .tab-btn').on('click', function (e) {
@@ -280,24 +151,21 @@
         $(this).tab('show');
     });
     $('.tab-btn-doc').on('click', function (e) {
-        $('.tabs').css('background-image', 'url(/img/tabs-doc-bg.png)');
+        $('.project-tabs').css('background-image', 'url(/img/tabs-doc-bg.png)');
         $('.current_tab').text("Pressklipp");
-        // $('.button-block.see-all').css('display', 'none');
         $('.act').removeClass('act');
         $(this).addClass("act");
 
     });
     $('.tab-btn-pic').on('click', function (e) {
-        $('.tabs').css('background-image', 'url(/img/tabs-pic-bg.png)');
+        $('.project-tabs').css('background-image', 'url(/img/tabs-pic-bg.png)');
         $('.current_tab').text("Galleriet");
-        // $('.button-block.see-all').css('display', 'none');
         $('.act').removeClass('act');
         $(this).addClass("act");
     });
     $('.tab-btn-bookopened').on('click', function (e) {
-        $('.tabs').css('background-image', 'url(/img/tabs-bloggen-bg.png)');
+        $('.project-tabs').css('background-image', 'url(/img/book-opened-gray-bg.png)');
         $('.current_tab').text("Bloggen");
-        // $('.button-block.see-all').css('display', 'block');
         $('.act').removeClass('act');
         $(this).addClass("act");
     });

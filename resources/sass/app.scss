@@ -190,36 +190,42 @@ body main {
 .img1 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   grid-area: img1;
   width: 300px;
 }
 .img2 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   grid-area: img2;
   width: 300px;
 }
 .img3 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   grid-area: img3;
   width: 300px;
 }
 .img4 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   grid-area: img4;
   width: 300px;
 }
 .img5 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   grid-area: img5;
   width: 300px;
 }
 .img6 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   grid-area: img6;
   width: 300px;
 }
@@ -467,9 +473,11 @@ body main {
 
 
 .container-wider {
-  max-width: 1302px !important;
+  //max-width: 1302px !important;
   & .tabs {
+    min-height: 100vh;
     background-image: url(/img/tabs-instagram-bg.png);
+    background-position: center;
     justify-content: space-between;
     background-repeat: no-repeat;
     align-items: center;
@@ -572,8 +580,8 @@ body main {
       &:hover {
         & .caption-text {
           max-height: fit-content;
-          overflow: unset;
-          text-overflow: unset;
+          overflow: hidden;
+          text-overflow: hidden;
           display: unset;
           line-height: unset;     /* fallback */
           max-height: 168px;      /* fallback */
@@ -614,7 +622,7 @@ body main {
 
 
     & .tab-content {
-      margin-top: -230px;
+      margin-top: -350px;
       & .modal .modal_custom {
         max-width: 800px;
       }
@@ -720,30 +728,35 @@ body main {
   & .img1 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img1;
     width: 300px;
   }
   & .img2 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img2;
     width: 300px;
   }
   & .img3 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img3;
     width: 300px;
   }
   & .img4 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img4;
     width: 300px;
   }
   & .img5 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img5;
     width: 300px;
   }
@@ -769,36 +782,42 @@ body main {
   & .img1 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img1;
     width: 300px;
   }
   & .img2 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img2;
     width: 300px;
   }
   & .img3 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img3;
     width: 300px;
   }
   & .img4 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img4;
     width: 300px;
   }
   & .img5 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img5;
     width: 300px;
   }
   & .img6 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     grid-area: img6;
     width: 300px;
   }
@@ -845,6 +864,17 @@ body main {
   & .main-content-text {
     & .cards {
       width: 100%;
+      & .card-youtube-container {
+        display: flex;
+        & .card .picture {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          background-color: black;
+        }
+      }
       & .card {
         width: 100%;
         margin: unset;
@@ -1033,15 +1063,13 @@ body main {
   background-image: url("/img/background-house.png");
   background-size: cover;
   background-position: center 15%;
-  & .projects-container {
-  }
 }
 
 .project-tabs {
-  min-height: 100vh;
-  background-image: url(/img/tabs-doc-bg.png);
+  background-image: url(/img/book-opened-gray-bg.png);
   justify-content: space-between;
   background-repeat: no-repeat;
+  background-position: center;
   align-items: center;
   flex-direction: column;
   position: relative;
@@ -1173,7 +1201,6 @@ body main {
 
 
   & .tab-content {
-    margin-top: -150px;
     width: 100%;
     .grid-container-3 {
       min-height: 800px;
@@ -1196,36 +1223,42 @@ body main {
       & .img1 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img1;
         width: 300px;
       }
       & .img2 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img2;
         width: 300px;
       }
       & .img3 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img3;
         width: 300px;
       }
       & .img4 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img4;
         width: 300px;
       }
       & .img5 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img5;
         width: 300px;
       }
       & .img6 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img6;
         width: 300px;
       }
@@ -1246,36 +1279,42 @@ body main {
       & .img1 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img1;
         width: 300px;
       }
       & .img2 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img2;
         width: 300px;
       }
       & .img3 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img3;
         width: 300px;
       }
       & .img4 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img4;
         width: 300px;
       }
       & .img5 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img5;
         width: 300px;
       }
       & .img6 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         grid-area: img6;
         width: 300px;
       }
@@ -1302,6 +1341,11 @@ body main {
       & .main-text {
         margin: 10px auto;
         color: #3D608B;
+        line-height: 20px;
+        max-height: 40px;
+      }
+      & .card-link {
+        color: black;
       }
       & .flag {
         position: absolute;
@@ -1356,90 +1400,74 @@ body main {
    height: 75px;
    overflow: hidden;
    transition: all 0.4s ease-in;
-   &:hover {
-     transition: all 0.4s ease-in;
-     height: unset;
-     overflow: unset;
-   }
  }
 
  .grid-container-proj {
-   height: 850px;
+   height: 833px;
    & .btn-1 {
-     padding: 15px;
+     padding-bottom: 15px;
      grid-area: btn-1;
+     justify-content: center;
      display: flex;
      flex-direction: column;
    }
    &.gc5 {
      display: grid;
-     grid-template-columns: 1.39fr 1.39fr 1.39fr 0.3fr 2.76fr 0.3fr 1.39fr 1.39fr 1.39fr;
-     grid-template-rows: 4% 30% 11% 4% 5% 26% 16% 4%;
+     grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+     grid-template-rows:  1fr 1fr;
      grid-template-areas:
-             "img1 img1  .     .   .     . .     .     ."
-             "img1 img1  .     .   .     . .     img4  img4"
-             "img1 img1  .     .   img3  . .     img4  img4"
-             ".    .     .     .   img3  . .     img4  img4"
-             ".    img2  img2  .   img3  . .     .     ."
-             ".    img2  img2  .   img3  . img5  img5  ."
-             ".    img2  img2  .   .     . img5  img5  ."
-             ".    .     .     .   .     . img5  img5  .";
+             "img1  img1  .     img5  .     img3  img3"
+             ".     img2  img2  img5  img4  img4  .   ";
      &.wb {
-       display: grid;
-       grid-template-columns: 1.39fr 1.39fr 1.39fr 0.3fr 2.76fr 0.3fr 1.39fr 1.39fr 1.39fr;
-       grid-template-rows: 4% 30% 11% 4% 5% 26% 16% 4%;
+       grid-template-rows:  1fr 1fr 0.5fr;
        grid-template-areas:
-               "img1 img1  .     .   .     . .     .     ."
-               "img1 img1  .     .   .     . .     img4  img4"
-               "img1 img1  .     .   img3  . .     img4  img4"
-               ".    .     .     .   img3  . .     img4  img4"
-               ".    img2  img2  .   img3  . .     .     ."
-               ".    img2  img2  .   img3  . img5  img5  ."
-               ".    img2  img2  .   .     . img5  img5  ."
-               ".    .     .     .   .     . img5  img5  .";
+               "img1  img1  .     img5  .     img3  img3"
+               ".     img2  img2  img5  img4  img4  .   "
+               ".     .     .     btn-1 .     .     .   ";
      }
    }
    &.gc4 {
      display: grid;
-     grid-template-columns: 1.39fr 1.39fr 1.39fr 0.3fr 2.76fr 0.3fr 1.39fr 1.39fr 1.39fr;
-     grid-template-rows: 4% 30% 11% 4% 5% 26% 16% 4%;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+     grid-template-rows:  1fr 1fr;
      grid-template-areas:
-             "img1 img1  .     .   .     . .     img4  img4"
-             "img1 img1  .     .   .     . .     img4  img4"
-             "img1 img1  .     .   .     . .     img4  img4"
-             ".    .     .     .   .     . .     .     ."
-             ".    img2  img2  .   .     . img5  img5  ."
-             ".    img2  img2  .   .     . img5  img5  ."
-             ".    img2  img2  .   .     . img5  img5  .";
+             "img1  img1  .     .     .     img3  img3"
+             ".     img2  img2  .     img4  img4  .   ";
+     &.wb {
+       grid-template-rows:  1fr 1fr 0.5fr;
+       grid-template-areas:
+               "img1  img1  .     .     .     img3  img3"
+               ".     img2  img2  .     img4  img4  .   "
+               ".     .     .     btn-1 .     .     .   ";
+     }
    }
+
    &.gc3 {
      display: grid;
-     grid-template-columns: 1.39fr 1.39fr 1.39fr 0.3fr 2.76fr 0.3fr 1.39fr 1.39fr 1.39fr;
-     grid-template-rows: 4% 30% 11% 4% 5% 26% 16% 4%;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows:  1fr 1fr;
      grid-template-areas:
-             "img1 img1  .     .   .     . .     img2  img2"
-             "img1 img1  .     .   .     . .     img2  img2"
-             "img1 img1  .     .   .     . .     img2  img2"
-             ".    .     .     .   img3  . .     .     ."
-             ".    .     .     .   img3  . .     .     ."
-             ".    .     .     .   img3  . .     .     ."
-             ".    .     .     .   img3  . .     .     .";
+             "img1  .     img3"
+             ".     img2  .   ";
+     &.wb {
+       grid-template-rows:  1fr 1fr 0.5fr;
+       grid-template-areas:
+               "img1  .     img3"
+               ".     img2  .   "
+               ".     btn-1 .   ";
+     }
    }
    &.gc2 {
      display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows:  1fr 1fr 1fr;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows:  1fr;
      grid-template-areas:
-             ".     .     .     "
-             "img1  .     img2  "
-             ".     .     .     ";
+             "img1  img2  ";
      &.wb {
-       grid-template-rows:  1fr 1fr 1fr 0.5fr;
+       grid-template-rows:  1fr 0.5fr;
        grid-template-areas:
-               ".     .       .     "
-               "img1  .       img2  "
-               ".     .       .     "
-               ".     btn-1   .     ";
+               "img1  img2 "
+               "btn-1 btn-1";
      }
    }
    &.gc1 {
@@ -1471,6 +1499,23 @@ body main {
    }
  }
 
+.sponsor-section {
+  background-color: #F7F7F7;
+  & .sponsor-title {
+    text-align: center;
+    padding: 78px 0 20px 0;
+    max-width: fit-content;
+    color: #262931;
+    font-family: Futura-Medium;
+    font-size: 2.625rem;
+  }
+  & .sponsor-picture-container {
+    padding: 20px 0 77px 0;
+    & .sponsor-picture {
+      max-width: 100%;
+    }
+  }
+}
 
 
 

@@ -38,7 +38,8 @@ class Controller extends BaseController
                 'description' => 'För att göra projektet övergripligt och tydligt för ungdomarna skapade vi en infografik som sammanfattar uppdraget.',
                 'good_place_link' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/infographic_A3.jpg',
                 'gallery_link' => 'http://www.alltomsundbyberg.se/galleriet/',
-                'slider' => [
+                'sponsors' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/Våra-sponsorer-nya2.png',
+                'slider1' => [
                     [
                         'id' => '1',
                         'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
@@ -48,10 +49,77 @@ class Controller extends BaseController
                     ],
                     [
                         'id' => '2',
-                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/5.jpg"',
-                        'title' => 'Toppbetyg för Nya Torget 365!',
-                        'subtitle' => 'Igår var det dags för vår stora presentation. Det var ett stort ögonblick när man fick se fem unika och genomtänkta torg. 30 minuter innan besökarna tågade in samlades eleverna i aulan för att öva på sin presentationsteknik medan vi fyllde glasen och tilltugget. Alla...',
-                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/slutpresentationen-av-nya-torget-365/'
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
+                    ],
+                    [
+                        'id' => '3',
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
+                    ],
+                    [
+                        'id' => '4',
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
+                    ],
+                    [
+                        'id' => '5',
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
+                    ],
+                ],
+                'slider2' => [
+                    [
+                        'id' => '1',
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
+                    ],
+                    [
+                        'id' => '2',
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
+                    ],
+                    [
+                        'id' => '3',
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
+                    ],
+                    [
+                        'id' => '4',
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
+                    ],
+                ],
+                'slider3' => [
+                    [
+                        'id' => '1',
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
+                    ],
+                    [
+                        'id' => '2',
+                        'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/05/01.jpg',
+                        'title' => 'Nya Torget 365',
+                        'subtitle' => 'Nyligen gick AlltomSundbyberg ihop med Ängskolan för att genomföra ett kreativt projekt. I ämnena Teknik och Bild ska 143 elever i årskurs 8 skapa egna modeller av vad de önskar av Sundbybergs nya torg. Efter mycket planering har vi äntligen kommit igång. Från den...',
+                        'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
                     ],
                 ],
                 'gallery' => [
@@ -101,7 +169,7 @@ class Controller extends BaseController
                     ],
 
                 ],
-                'sponsors' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/Våra-sponsorer-nya2.png'
+
             ],
             [
                 'id' => 2,

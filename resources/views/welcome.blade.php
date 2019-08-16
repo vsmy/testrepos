@@ -117,7 +117,7 @@
         </div>
     </section>
   <section>
-        <div class="container container-wider">
+        <div class="container-wider">
             <div class="tabs">
                 <div class="tab-toggler nav flex-column nav-pills" id="myTab"  id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <span class="current_tab">Instagram</span>
