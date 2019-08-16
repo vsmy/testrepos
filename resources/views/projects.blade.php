@@ -16,13 +16,9 @@
                 </p>
             </div>
         </div>
-        <div class="button-block see-all">
-            <a href="{{  $data->good_place_link  }}">
-                <button>
-                    <span class="button-text">Se uppdraget här</span>
-                </button>
-            </a>
-        </div>
+        <a href="{{  $data->good_place_link  }}" class="btn-yellow">
+            Se uppdraget här
+        </a>
     </div>
 </section>
 <section>
@@ -49,10 +45,11 @@
             </div>
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
-                    <div class="grid-container" id="wp-posts">
+                    <div class="grid-container-proj gc{{count($data->slider)}} wb" id="wp-posts">
 
-                        @foreach( $data->slider as  $slider)
-                        <div class="img{{$slider['id']}}">
+                    @foreach( $data->slider as  $slider)
+
+                        <div class="img{{$slider['id']}} mx-auto">
                             <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
                                 <div class="blog-card">
                                     <div class="flag yellow"></div>
@@ -70,11 +67,11 @@
                         </div>
 
                         @endforeach
-                    </div>
-                    <div class="button-block see-all m-auto">
-                        <button>
-                            <span class="button-text">Se mer</span>
-                        </button>
+                        <div class="btn-1 mx-auto">
+                            <a href="http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/infographic_A3.jpg" class="btn-yellow">
+                                Se mer
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="v-pills-pic" role="tabpanel" aria-labelledby="v-pills-pic-tab">
@@ -182,11 +179,6 @@
                             </a>
                         </div>
                     </div>
-                    <div class="button-block see-all m-auto">
-                        <button>
-                            <span class="button-text">Se mer</span>
-                        </button>
-                    </div>
                 </div>
                 <div class="tab-pane fade" id="v-pills-doc" role="tabpanel" aria-labelledby="v-pills-doc-tab">
                     <div class="grid-container" id="insta-images">
@@ -275,11 +267,6 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
-                    <div class="button-block see-all m-auto">
-                        <button>
-                            <span class="button-text">Se mer</span>
-                        </button>
                     </div>
                 </div>
             </div>

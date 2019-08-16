@@ -204,7 +204,7 @@
       margin-left: -40%;
     }
   }
-  .container-wider .tabs .tab-toggler{
+  .container-wider .tabs .tab-toggler {
     width: 519px;
     height: 242px;
     & .tab-btn {
@@ -242,6 +242,45 @@
       left: 248px;
     }
   }
+  .container-wider .project-tabs .tab-toggler {
+    width: 519px;
+    height: 242px;
+    & .tab-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      &.tab-btn-bookopened {
+        font-size: 1.2em;
+        padding: 9px;
+        left: 101px;
+        top: 54px;
+      }
+      &.tab-btn-pic {
+        font-size: 1.2em;
+        padding: 13px 10px;
+        top: 114px;
+        left: 237px;
+      }
+      &.tab-btn-doc {
+        font-size: 1.2em;
+        padding: 13px 11px;
+        top: 54px;
+        right: 101px;
+      }
+    }
+    & .current_tab {
+      padding: 5px;
+      font-size: 1.5rem;
+    }
+    & .arrow {
+      width: 5%;
+      transform-origin: center -95px;
+      top: 61px;
+      left: 248px;
+    }
+  }
 }
 
 
@@ -257,7 +296,7 @@
   }
 
   .container-wider .tabs .tab-toggler {
-    width: 320px;;
+    width: 320px;
     height: 105px;
     & .current_tab {
       font-size: 1rem;
@@ -283,6 +322,35 @@
       }
     }
   }
+
+  .container-wider .project-tabs .tab-toggler {
+    width: 320px;
+    height: 105px;
+    & .current_tab {
+      font-size: 1rem;
+    }
+    & .arrow {
+      transform-origin: center -150px;
+      top: 95px;
+      left: 152px;
+      content: url("/img/arrow-reversed.svg");
+    }
+    & .tab-btn {
+      &.tab-btn-bookopened {
+        left: 47px;
+        top: 3px;
+      }
+      &.tab-btn-pic {
+        top: 48px;
+        left: 137px;
+      }
+      &.tab-btn-doc {
+        top: 3px;
+        right: 47px;
+      }
+    }
+  }
+
   .garden-section .row.main-content-text {
     background-position: 0% 30%;
     background-size: auto;
@@ -333,6 +401,31 @@
   .grid-container, .grid-container-2 {
     & .img1, & .img2, & .img4, & .img5 {
       margin: auto;
+    }
+  }
+  .container.container-wider {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container-proj {
+    &.gc2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows:  1fr 1fr 1fr;
+      grid-template-areas:
+              ".   "
+              "img1"
+              "img2";
+      &.wb {
+        grid-template-rows:  1fr 1fr 1fr 0.5fr;
+        grid-template-areas:
+          ".   "
+          "img1"
+          "img2"
+          "btn-1";
+      }
     }
   }
 }

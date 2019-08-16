@@ -169,7 +169,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Dot-Net\testrepos\resources\js\script.js */"./resources/js/script.js");
+module.exports = __webpack_require__(/*! C:\Code\test\testrepos\resources\js\script.js */"./resources/js/script.js");
 
 
 /***/ })

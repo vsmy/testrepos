@@ -47,7 +47,7 @@ class Controller extends BaseController
                         'sell_detail_link' => 'http://www.alltomsundbyberg.se/nya-torget-365/nya-torget-365/'
                     ],
                     [
-                        'id' => '4',
+                        'id' => '2',
                         'img' => 'http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/5.jpg"',
                         'title' => 'Toppbetyg för Nya Torget 365!',
                         'subtitle' => 'Igår var det dags för vår stora presentation. Det var ett stort ögonblick när man fick se fem unika och genomtänkta torg. 30 minuter innan besökarna tågade in samlades eleverna i aulan för att öva på sin presentationsteknik medan vi fyllde glasen och tilltugget. Alla...',
@@ -122,15 +122,7 @@ class Controller extends BaseController
             $r->to($mail)->subject($request->message);
         });
         return back();
-//        $to_name = 'Admin Name';
-//        $to_email = "sergey.hural.test@gmail.com";
-//        $data = $request;
-//
-//
-//        // emails.mail - view in resources/views. Should be smthg like "email/contact_us"
-//        Mail::send("emails.mail", $data, function($message) use ($to_name, $to_email) {
-//            $message->to($to_email, $to_name)->subject("Laravel Test Mail");
-//        });
+
     }
 }
 
