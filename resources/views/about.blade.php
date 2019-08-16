@@ -78,11 +78,6 @@
 {{--                        </div>--}}
                     </div>
                 </div>
-                <div class="button-block see-all">
-                    <button>
-                        <span class="button-text">Öppna bloggen </span>
-                    </button>
-                </div>
             </div>
             <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -105,11 +100,13 @@
         </div>
     </section>
     <section class="bakgrund">
-        <div class="container main-info">
-            <h2 class="title font-32">Bakgrund</h2>
-            <p class="text font-18">
-                Alltomsundbyberg grundades 2015 i form av en enkel hemsida där vi delade information kring stadens historiska minnen. Sundbybergs historia är så väldokumenterad från att den första tomten såldes att vi ville dela med oss av den informationen på ett modernt sätt. Intresset för vårt innehåll växte och vi utvecklade sedan sedan med att dokumentera stadsutvecklingen i staden.
-            </p>
+        <div class="container">
+            <div class="main-info">
+                <h2 class="title font-32">Bakgrund</h2>
+                <p class="text font-18">
+                    Alltomsundbyberg grundades 2015 i form av en enkel hemsida där vi delade information kring stadens historiska minnen. Sundbybergs historia är så väldokumenterad från att den första tomten såldes att vi ville dela med oss av den informationen på ett modernt sätt. Intresset för vårt innehåll växte och vi utvecklade sedan sedan med att dokumentera stadsutvecklingen i staden.
+                </p>
+            </div>
         </div>
         <div class="bs-wizard">
             <div class="col-xs-3 bs-wizard-step disabled">
@@ -136,7 +133,7 @@
                 <a href="#" class="bs-wizard-dot"></a>
                 <div class="bs-wizard-info text-center">
                     <p class="year">2016</p>
-                    <p class="details">Löpande dokumentering av stadsutvecklingsprojekt</p>
+                    <p class="details">Löpande dokumentering av stadsutvecklings projekt</p>
                 </div>
             </div>
 

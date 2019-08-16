@@ -212,8 +212,13 @@
 
 @media (max-width: 992px) {
   .full-screen.policy-header {
-    padding: 180px 0 50px 0;
+    //padding: 180px 0 50px 0;
   }
+
+  .full-screen {
+    margin-top: -78px;
+  }
+
   .navbar {
     max-height: 54px;
     & .navbar-collapse .navbar-nav .nav-item {
@@ -300,6 +305,12 @@
 
 
 @media (max-width: 767px) {
+  .contact_us {
+    background: url(/images/contact_us/Group_1666.svg) calc(163% - 350px) 70px no-repeat,
+    url(/images/contact_us/Group_1664.svg) calc(151% - 350px) 15px no-repeat,
+    url(/images/contact_us/Group_1668.svg) calc(139% - 350px) 116px no-repeat;
+  }
+
   .garden-section .row.main-content-text {
     background-size: auto;
   }
@@ -444,6 +455,15 @@
   }
 }
 
+@media (max-width: 650px) {
+  .big-map {
+    & .cards {
+      & .card {
+        margin-right: 5px;
+      }
+    }
+  }
+}
 
 @media (max-width: 575px) {
   .full-screen.policy-header {
@@ -555,11 +575,19 @@
 }
 
 @media (max-width: 425px) {
-  .logo-wrapper img {
-    width: 75%;
-  }
   .logo-wrapper {
-    width: 75%;
+    & img {
+      max-width: 216px;
+    }
+  }
+  .contact_us {
+    background: url(/images/contact_us/Group_1666.svg) calc(261% - 350px) 70px no-repeat, url(/images/contact_us/Group_1664.svg) calc(224% - 350px) 15px no-repeat, url(/images/contact_us/Group_1668.svg) calc(189% - 350px) 116px no-repeat;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact_us {
+    background: url(/images/contact_us/Group_1666.svg) calc(306% - 350px) 70px no-repeat, url(/images/contact_us/Group_1664.svg) calc(255% - 350px) 15px no-repeat, url(/images/contact_us/Group_1668.svg) calc(209% - 350px) 116px no-repeat;
   }
 }
 
@@ -577,11 +605,15 @@
 
 @media (max-width: 330px) {
   .container-wider .tabs .tab-toggler {
-    margin-left: -15px;
+    //margin-left: -15px;
   }
 }
 
-
+@media (max-width: 320px) {
+  .contact_us {
+    background: url(/images/contact_us/Group_1666.svg) calc(403% - 350px) 70px no-repeat, url(/images/contact_us/Group_1664.svg) calc(331% - 350px) 15px no-repeat, url(/images/contact_us/Group_1668.svg) calc(247% - 350px) 116px no-repeat;
+  }
+}
 
 
 

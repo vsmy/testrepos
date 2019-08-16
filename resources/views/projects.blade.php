@@ -27,108 +27,105 @@
 <section>
     <div class="container-wider">
         <div class="project-tabs">
-            <div class="container">
+            <div class="tab-toggler nav flex-column nav-pills" id="myTab"  id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <span class="current_tab">Bloggen</span>
+                <img src="/img/arrow.svg" alt="" class="arrow" id="arrow">
+                <a class="nav-link active" id="v-pills-bookopened-tab" data-toggle="pill" href="#v-pills-bookopened" role="tab" aria-controls="v-pills-bookopened" aria-selected="true">
+                    <div class="tab-btn tab-btn-bookopened act">
+                        <i class="icon-book_opened"></i>
+                    </div>
+                </a>
+                <a class="nav-link" id="v-pills-doc-tab" data-toggle="pill" href="#v-pills-doc" role="tab" aria-controls="v-pills-doc" aria-selected="false">
+                    <div class="tab-btn tab-btn-doc">
+                        <i class="icon-doc"></i>
+                    </div>
+                </a>
+                <a class="nav-link" id="v-pills-pic-tab" data-toggle="pill" href="#v-pills-pic" role="tab" aria-controls="v-pills-pic" aria-selected="false">
+                    <div class="tab-btn tab-btn-pic">
+                        <i class="icon-photo"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
+                    <div class="grid-container-proj gc{{count($data->slider1)}} wb" id="wp-posts">
 
-                <div class="tab-toggler nav flex-column nav-pills" id="myTab"  id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <span class="current_tab">Bloggen</span>
-                    <img src="/img/arrow.svg" alt="" class="arrow" id="arrow">
-                    <a class="nav-link active" id="v-pills-bookopened-tab" data-toggle="pill" href="#v-pills-bookopened" role="tab" aria-controls="v-pills-bookopened" aria-selected="true">
-                        <div class="tab-btn tab-btn-bookopened act">
-                            <i class="icon-book_opened"></i>
-                        </div>
-                    </a>
-                    <a class="nav-link" id="v-pills-doc-tab" data-toggle="pill" href="#v-pills-doc" role="tab" aria-controls="v-pills-doc" aria-selected="false">
-                        <div class="tab-btn tab-btn-doc">
-                            <i class="icon-doc"></i>
-                        </div>
-                    </a>
-                    <a class="nav-link" id="v-pills-pic-tab" data-toggle="pill" href="#v-pills-pic" role="tab" aria-controls="v-pills-pic" aria-selected="false">
-                        <div class="tab-btn tab-btn-pic">
-                            <i class="icon-photo"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
-                        <div class="grid-container-proj gc{{count($data->slider1)}} wb" id="wp-posts">
+                        @foreach( $data->slider1 as  $slider)
 
-                            @foreach( $data->slider1 as  $slider)
-
-                                <div class="img{{$slider['id']}} img mx-auto">
-                                    <a class="post-link" target="_blank">
-                                        <div class="blog-card">
-                                            <div class="flag yellow"></div>
-                                            <div class="picture">
-                                                <img class="w-100" src="{{ $slider['img'] }}" alt="">
-                                            </div>
-                                            <div class="article">
-                                                <div class="headliner">
-                                                    <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
-                                                </div>
-                                                <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
-                                                <a href="{{ $slider['sell_detail_link'] }}" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
-                                            </div>
+                            <div class="img{{$slider['id']}} img mx-auto">
+                                <a class="post-link" target="_blank">
+                                    <div class="blog-card">
+                                        <div class="flag yellow"></div>
+                                        <div class="picture">
+                                            <img class="w-100" src="{{ $slider['img'] }}" alt="">
                                         </div>
-                                    </a>
-                                </div>
-
-                            @endforeach
-                            <div class="btn-1 mx-auto">
-                                <a href="http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/infographic_A3.jpg" class="btn-yellow">
-                                    Se mer
+                                        <div class="article">
+                                            <div class="headliner">
+                                                <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                            </div>
+                                            <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
+{{--                                            <a href="{{ $slider['sell_detail_link'] }}" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>--}}
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
+
+                        @endforeach
+                        <div class="btn-1 mx-auto">
+                            <a href="http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/infographic_A3.jpg" class="btn-yellow">
+                                Se mer
+                            </a>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-pic" role="tabpanel" aria-labelledby="v-pills-pic-tab">
-                        <div class="grid-container-proj gc{{count($data->slider2)}}" id="wp-posts">
+                </div>
+                <div class="tab-pane fade" id="v-pills-pic" role="tabpanel" aria-labelledby="v-pills-pic-tab">
+                    <div class="grid-container-proj gc{{count($data->slider2)}}" id="wp-posts">
 
-                            @foreach( $data->slider2 as  $slider)
+                        @foreach( $data->slider2 as  $slider)
 
-                                <div class="img{{$slider['id']}} img mx-auto">
-                                    <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
-                                        <div class="blog-card">
-                                            <div class="flag yellow"></div>
-                                            <div class="picture">
-                                                <img class="w-100" src="{{ $slider['img'] }}" alt="">
-                                            </div>
-                                            <div class="article">
-                                                <div class="headliner">
-                                                    <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
-                                                </div>
-                                                <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
-                                            </div>
+                            <div class="img{{$slider['id']}} img mx-auto">
+                                <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
+                                    <div class="blog-card">
+                                        <div class="flag yellow"></div>
+                                        <div class="picture">
+                                            <img class="w-100" src="{{ $slider['img'] }}" alt="">
                                         </div>
-                                    </a>
-                                </div>
+                                        <div class="article">
+                                            <div class="headliner">
+                                                <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                            </div>
+                                            <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
 
-                            @endforeach
-                        </div>
+                        @endforeach
                     </div>
-                    <div class="tab-pane fade" id="v-pills-doc" role="tabpanel" aria-labelledby="v-pills-doc-tab">
-                        <div class="grid-container-proj gc{{count($data->slider3)}}" id="wp-posts">
+                </div>
+                <div class="tab-pane fade" id="v-pills-doc" role="tabpanel" aria-labelledby="v-pills-doc-tab">
+                    <div class="grid-container-proj gc{{count($data->slider3)}}" id="wp-posts">
 
-                            @foreach( $data->slider3 as  $slider)
+                        @foreach( $data->slider3 as  $slider)
 
-                                <div class="img{{$slider['id']}} img mx-auto">
-                                    <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
-                                        <div class="blog-card">
-                                            <div class="flag yellow"></div>
-                                            <div class="picture">
-                                                <img class="w-100" src="{{ $slider['img'] }}" alt="">
-                                            </div>
-                                            <div class="article">
-                                                <div class="headliner">
-                                                    <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
-                                                </div>
-                                                <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
-                                            </div>
+                            <div class="img{{$slider['id']}} img mx-auto">
+                                <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
+                                    <div class="blog-card">
+                                        <div class="flag yellow"></div>
+                                        <div class="picture">
+                                            <img class="w-100" src="{{ $slider['img'] }}" alt="">
                                         </div>
-                                    </a>
-                                </div>
+                                        <div class="article">
+                                            <div class="headliner">
+                                                <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                            </div>
+                                            <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
 
-                            @endforeach
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

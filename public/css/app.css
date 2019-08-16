@@ -45,7 +45,7 @@
 
 .icon-map_ico:before {
   content: "\E900" !important;
-  color: #207dff;
+  color: #FFCA00;
 }
 
 .futura {
@@ -761,8 +761,12 @@ body main {
 .btn-yellow {
   background-color: #FFCA00;
   color: #262931;
-  padding: 20px 44px;
+  padding: 20px;
+  text-align: center;
   border-radius: 40px;
+  min-width: 220px;
+  z-index: 1;
+  margin: 15px;
   display: inline-block;
 }
 
@@ -916,14 +920,20 @@ body main {
 }
 
 .full-screen {
-  height: 100vh;
-  margin-top: -90px;
+  min-height: 100vh;
+  margin-top: -114px;
+  display: flex;
+  align-items: center;
 }
 
 .full-screen .main-content-text {
   color: white;
   align-items: center;
   font-size: 3.375rem;
+}
+
+.full-screen .main-content-text .main-header {
+  margin-bottom: 3.5rem;
 }
 
 .full-screen .main-content-text .miles-of-city .icon-map_ico {
@@ -937,7 +947,7 @@ body main {
 }
 
 .full-screen .main-content-text .up_half {
-  padding: 200px 0;
+  padding-top: 90px;
 }
 
 .full-screen .fullscreen-bg {
@@ -990,11 +1000,11 @@ body main {
 
 .garden-section .main-content-text {
   background: url(/img/dot-map.svg);
-  background-size: 395px;
+  background-size: contain;
   position: relative;
   background-repeat: no-repeat;
-  background-position: 0% 35px;
-  padding: 50px 0;
+  background-position: left center;
+  margin: 50px 0;
 }
 
 .garden-section .main-content-text .popup-area {
@@ -1067,12 +1077,22 @@ body main {
 
 .big-map.lm:before,
 .street-bg.lm:before {
-  background-color: #d7d7d7d9;
+  background-color: #f7f7f7d9;
   content: "";
   display: block;
   height: 100%;
   position: absolute;
   width: 100%;
+}
+
+.big-map.lm .main-content-text .header h1,
+.street-bg.lm .main-content-text .header h1 {
+  color: black;
+}
+
+.big-map.lm .main-content-text .cards .card .article .main-text,
+.street-bg.lm .main-content-text .cards .card .article .main-text {
+  color: #606C7C;
 }
 
 .big-map .main-content-text,
@@ -1091,7 +1111,7 @@ body main {
 
 .big-map .main-content-text .header h1,
 .street-bg .main-content-text .header h1 {
-  padding: 30px;
+  padding: 30px 0;
   font-size: 2.625rem;
   color: white;
 }
@@ -1118,6 +1138,7 @@ body main {
 .big-map .cards .card,
 .street-bg .cards .card {
   background-color: transparent;
+  margin: 50px 20px 10px 20px;
 }
 
 .big-map .cards .card:first-child,
@@ -1288,7 +1309,6 @@ body main {
 
 .container-wider .tabs .card {
   background-color: transparent;
-  background-size: cover;
   background-position: center;
   border: none;
   height: 295px;
@@ -1345,7 +1365,7 @@ body main {
 }
 
 .container-wider .tabs .tab-content {
-  margin-top: -350px;
+  margin-top: -300px;
 }
 
 .container-wider .tabs .tab-content .modal .modal_custom {
@@ -1425,8 +1445,8 @@ body main {
   margin-top: auto;
 }
 
-.container-wider .tabs .button-block.see-all {
-  margin-top: -165px;
+.container-wider .tabs .btn-yellow {
+  margin-bottom: 15px;
 }
 
 .footer {
@@ -1560,6 +1580,7 @@ body main {
   z-index: -1;
   position: relative;
   margin-top: -114px;
+  min-height: auto;
   padding: 160px 0;
   height: unset;
   max-height: 500px;
@@ -1633,9 +1654,18 @@ body main {
   max-height: fit-content;
 }
 
+.street-bg .main-content-text .cards .card .article .headliner .title {
+  color: black;
+}
+
+.street-bg .main-content-text .cards .card .article .headliner .date {
+  color: #26293160;
+}
+
 .street-bg .main-content-text .cards .card .article .main-text {
   overflow: hidden;
   text-overflow: ellipsis;
+  color: white;
   display: -webkit-box;
   line-height: 24px;
   /* fallback */
@@ -1646,7 +1676,7 @@ body main {
 }
 
 .street-bg .main-content-text .cards .card .article .card-link {
-  color: #FFCA00;
+  color: black;
 }
 
 .street-bg .main-content-text .cards .card .article span {
@@ -1674,11 +1704,10 @@ body main {
 }
 
 .bakgrund .bs-wizard {
-  margin-top: 40px;
+  padding: 52px 13% 190px 13%;
   width: 100%;
   display: flex;
   border-bottom: solid 1px #e0e0e0;
-  padding: 0 13% 10px;
 }
 
 .bakgrund .bs-wizard .bs-wizard-step {
@@ -1700,6 +1729,7 @@ body main {
 
 .bakgrund .bs-wizard .bs-wizard-step .bs-wizard-info {
   font-family: Futura-Medium;
+  padding: 0 15px;
 }
 
 .bakgrund .bs-wizard .bs-wizard-step .bs-wizard-info .year {
@@ -1806,6 +1836,7 @@ body main {
 
 .borough .region-desc {
   font-family: Futura-Medium;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1821,7 +1852,7 @@ body main {
 }
 
 .borough .region-map img {
-  width: 100%;
+  max-width: 300px;
 }
 
 .col-xs-3 {
@@ -2486,8 +2517,8 @@ button {
 }
 
 @media (max-width: 992px) {
-  .full-screen.policy-header {
-    padding: 180px 0 50px 0;
+  .full-screen {
+    margin-top: -78px;
   }
 
   .navbar {
@@ -2561,6 +2592,10 @@ button {
 }
 
 @media (max-width: 767px) {
+  .contact_us {
+    background: url(/images/contact_us/Group_1666.svg) calc(163% - 350px) 70px no-repeat, url(/images/contact_us/Group_1664.svg) calc(151% - 350px) 15px no-repeat, url(/images/contact_us/Group_1668.svg) calc(139% - 350px) 116px no-repeat;
+  }
+
   .garden-section .row.main-content-text {
     background-size: auto;
   }
@@ -2733,6 +2768,12 @@ button {
   }
 }
 
+@media (max-width: 650px) {
+  .big-map .cards .card {
+    margin-right: 5px;
+  }
+}
+
 @media (max-width: 575px) {
   .full-screen.policy-header .main-content-text {
     font-size: 1.5rem;
@@ -2851,11 +2892,17 @@ button {
 
 @media (max-width: 425px) {
   .logo-wrapper img {
-    width: 75%;
+    max-width: 216px;
   }
 
-  .logo-wrapper {
-    width: 75%;
+  .contact_us {
+    background: url(/images/contact_us/Group_1666.svg) calc(261% - 350px) 70px no-repeat, url(/images/contact_us/Group_1664.svg) calc(224% - 350px) 15px no-repeat, url(/images/contact_us/Group_1668.svg) calc(189% - 350px) 116px no-repeat;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact_us {
+    background: url(/images/contact_us/Group_1666.svg) calc(306% - 350px) 70px no-repeat, url(/images/contact_us/Group_1664.svg) calc(255% - 350px) 15px no-repeat, url(/images/contact_us/Group_1668.svg) calc(209% - 350px) 116px no-repeat;
   }
 }
 
@@ -2876,9 +2923,9 @@ button {
   }
 }
 
-@media (max-width: 330px) {
-  .container-wider .tabs .tab-toggler {
-    margin-left: -15px;
+@media (max-width: 320px) {
+  .contact_us {
+    background: url(/images/contact_us/Group_1666.svg) calc(403% - 350px) 70px no-repeat, url(/images/contact_us/Group_1664.svg) calc(331% - 350px) 15px no-repeat, url(/images/contact_us/Group_1668.svg) calc(247% - 350px) 116px no-repeat;
   }
 }
 

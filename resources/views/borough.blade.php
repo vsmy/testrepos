@@ -105,22 +105,22 @@ foreach ($regioncategories as $value) {
  <section class="borough_section">
      <div class="container borough">
          <div class="row">
-             <div class="col-md-6 region-desc" style="color: white">
+             <div class="col-md-6 region-desc">
                  <h1 class="text-center font-32"> <?= $select['name']?></h1>
                  <div class="text-center est-year font-18"> <?= $select['est']?></div>
                  <div class=" font-18"> <?= $select['description']?></div>
              </div>
              <div class="col-md-6 region-map d-flex justify-content-center">
-                 <img style="max-width: 300px;" src="/images/region/<?= $select['id']?>.svg "alt="">
+                 <img src="/images/region/<?= $select['id']?>.svg "alt="">
              </div>
          </div>
      </div>
  </section>
 <section>
     <div class="street-bg lm">
-        <div class="main-content-text row container">
+        <div class="main-content-text container">
             <div class="header">
-                <h1 style="color: black" class="futura font-42">Blog Posts</h1>
+                <h1 class="futura font-42">Blog Posts</h1>
             </div>
             <div class="cards row">
                 <div class="col-md-12 col-lg-6">
@@ -131,14 +131,14 @@ foreach ($regioncategories as $value) {
                         </div>
                         <div class="article">
                             <div class="headliner">
-                                <h2 style="color: black" class="title font-24 bold">Title Post</h2>
-                                <span style="color: #262931" class="date font-16">2019-05-24</span>
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
                             </div>
-                            <p style="color: #262931" class="main-text">
+                            <p class="main-text">
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                                 invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                             </p>
-                            <a style="color: #262931" href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -150,14 +150,14 @@ foreach ($regioncategories as $value) {
                         </div>
                         <div class="article">
                             <div class="headliner">
-                                <h2 style="color: black" class="title font-24 bold">Title Post</h2>
-                                <span style="color: #262931"  class="date font-16">2019-05-24</span>
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
                             </div>
-                            <p style="color: #262931" class="main-text">
+                            <p class="main-text">
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                                 invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                             </p>
-                            <a style="color: #262931" href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
                         </div>
                     </div>
                     <div class="card">
@@ -167,14 +167,14 @@ foreach ($regioncategories as $value) {
                         </div>
                         <div class="article">
                             <div class="headliner">
-                                <h2 style="color: black" class="title font-24 bold">Title Post</h2>
-                                <span style="color: #262931" class="date font-16">2019-05-24</span>
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
                             </div>
-                            <p style="color: #262931" class="main-text">
+                            <p class="main-text">
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                                 invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                             </p>
-                            <a style="color: #262931" href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -186,14 +186,14 @@ foreach ($regioncategories as $value) {
                         </div>
                         <div class="article">
                             <div class="headliner">
-                                <h2 style="color: black" class="title font-24 bold">Title Post</h2>
-                                <span style="color: #262931" class="date font-16">2019-05-24</span>
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
                             </div>
-                            <p style="color: #262931" class="main-text">
+                            <p class="main-text">
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                                 invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                             </p>
-                            <a style="color: #262931" href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
                         </div>
                     </div>
                     <div class="card">
@@ -203,23 +203,21 @@ foreach ($regioncategories as $value) {
                         </div>
                         <div class="article">
                             <div class="headliner">
-                                <h2 style="color: black" class="title font-24 bold">Title Post</h2>
-                                <span style="color: #262931" class="date font-16">2019-05-24</span>
+                                <h2 class="title font-24 bold">Title Post</h2>
+                                <span class="date font-16">2019-05-24</span>
                             </div>
-                            <p style="color: #262931" class="main-text">
+                            <p class="main-text">
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                                 invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                             </p>
-                            <a style="color: #262931" href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
+                            <a href="" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="button-block see-all">
-                <button>
-                    <span class="button-text">Öppna bloggen </span>
-                </button>
-            </div>
+            <a href="" class="btn-yellow">
+                Öppna bloggen
+            </a>
         </div>
     </div>
 </section>

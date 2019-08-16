@@ -14,10 +14,10 @@
         <div class="container h-100">
             <div class="row h-100 main-content-text">
                 <div class="col-md-6">
-                    <h1 class="futura font-54">
+                    <h1 class="futura font-54 main-header">
                         Vi kartlägger staden med allt du vill veta!
                     </h1>
-                    <br>
+{{--                    <br>--}}
                     <p class="futura font-20 medium">
                         Från stadsutveckling till kulturliv. Häng med i utvecklingen av Sveriges snabbast växande
                         stad!
@@ -108,11 +108,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="button-block see-all">
-                    <button>
-                        <span class="button-text">Öppna bloggen </span>
-                    </button>
-                </div>
+                <a href="" class="btn-yellow">
+                    Öppna bloggen
+                </a>
             </div>
         </div>
     </section>
@@ -242,11 +240,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="button-block see-all">
-                    <button>
-                        <span class="button-text">Se mer</span>
-                    </button>
-                </div>
+                <a href="" class="btn-yellow">
+                    Se mer
+                </a>
             </div>
         </div>
     </section>
