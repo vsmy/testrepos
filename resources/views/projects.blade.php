@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="full-screen header projects-section" style="z-index: 0">
+<section class="full-screen header projects-section">
     <div class="container projects-container">
         <div class="row h-100 main-content-text">
             <div class="col-md-6">
@@ -46,87 +46,90 @@
                     </div>
                 </a>
             </div>
-            <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
-                    <div class="grid-container-proj gc{{count($data->slider1)}} wb" id="wp-posts">
+            <div class="tab-content container" id="v-pills-tabContent">
+                <div class="container tab-pane fade show active" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
+                    @if (count($data->slider1) > 0)
+                        <div class="grid-container-proj gc{{count($data->slider1)}} wb" id="wp-posts">
 
-                        @foreach( $data->slider1 as  $slider)
-
-                            <div class="img{{$slider['id']}} img mx-auto">
-                                <a class="post-link" target="_blank">
-                                    <div class="blog-card">
+                            @foreach( $data->slider1 as  $slider)
+                                <div class="img{{$loop->index + 1}} img">
+                                    <a href="" class="postlink">
                                         <div class="flag yellow"></div>
-                                        <div class="picture">
-                                            <img class="w-100" src="{{ $slider['img'] }}" alt="">
-                                        </div>
-                                        <div class="article">
-                                            <div class="headliner">
-                                                <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                        <div class="blog-card">
+                                            <div class="picture">
+                                                <img class="w-100 slide" src="{{ $slider['img'] }}" alt="">
                                             </div>
-                                            <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
-{{--                                            <a href="{{ $slider['sell_detail_link'] }}" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>--}}
+                                            <div class="article">
+                                                <div class="headliner">
+                                                    <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                                </div>
+                                                <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
+                                </div>
+
+                            @endforeach
+                            <div class="btn-1 mx-auto">
+                                <a href="http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/infographic_A3.jpg" class="btn-yellow">
+                                    Se mer
                                 </a>
                             </div>
-
-                        @endforeach
-                        <div class="btn-1 mx-auto">
-                            <a href="http://www.alltomsundbyberg.se/wp-content/uploads/2017/04/infographic_A3.jpg" class="btn-yellow">
-                                Se mer
-                            </a>
                         </div>
-                    </div>
+                    @else
+                    <div class="nothing-placeholder">Ingenting här ännu</div>
+                    @endif
                 </div>
                 <div class="tab-pane fade" id="v-pills-pic" role="tabpanel" aria-labelledby="v-pills-pic-tab">
-                    <div class="grid-container-proj gc{{count($data->slider2)}}" id="wp-posts">
+                    @if (count($data->gallery) > 0)
+                        <div class="grid-container-proj gc{{count($data->gallery)}}" id="wp-posts">
 
-                        @foreach( $data->slider2 as  $slider)
-
-                            <div class="img{{$slider['id']}} img mx-auto">
-                                <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
-                                    <div class="blog-card">
+                            @foreach( $data->gallery as  $slider)
+                                <div class="img{{$loop->index + 1}} img mx-auto">
+                                    <a href="" class="postlink">
                                         <div class="flag yellow"></div>
-                                        <div class="picture">
-                                            <img class="w-100" src="{{ $slider['img'] }}" alt="">
-                                        </div>
-                                        <div class="article">
-                                            <div class="headliner">
-                                                <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                        <div class="blog-card">
+                                            <div class="picture">
+                                                <img class="w-100 gallery" src="{{ $slider['img'] }}" alt="">
                                             </div>
-                                            <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
-                                        </div>
+                                            <div class="article">
+                                                <div class="headliner">
+                                                    <h2 class="title font-24 bold">Title</h2>
+                                                    <span class="date font-16">{{$slider['date']}}</span>
+                                                </div>
+                                                <p class="main-text autoHide">{{ $slider['desc'] }}</p>
+{{--                                                <a href="#" class="card-link">Learn more <img src="/img/little-arrow.svg" alt=""></a>--}}
+                                            </div>
                                     </div>
-                                </a>
-                            </div>
-
-                        @endforeach
-                    </div>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                    @else
+                        <div class="nothing-placeholder">Ingenting här ännu</div>
+                    @endif
                 </div>
                 <div class="tab-pane fade" id="v-pills-doc" role="tabpanel" aria-labelledby="v-pills-doc-tab">
-                    <div class="grid-container-proj gc{{count($data->slider3)}}" id="wp-posts">
+                    @if (count($data->wp_blog) > 0)
+                        <div class="grid-container-proj gc{{count($data->wp_blog)}}" id="wp-posts">
 
-                        @foreach( $data->slider3 as  $slider)
-
-                            <div class="img{{$slider['id']}} img mx-auto">
-                                <a class="post-link" href="{{ $slider['sell_detail_link'] }}" target="_blank">
-                                    <div class="blog-card">
+                            @foreach( $data->wp_blog as  $slider)
+                                <a href="{{$slider['link']}}" class="img img{{$loop->index + 1}} postlink">
+                                    <div class="mx-auto">
                                         <div class="flag yellow"></div>
-                                        <div class="picture">
-                                            <img class="w-100" src="{{ $slider['img'] }}" alt="">
-                                        </div>
-                                        <div class="article">
-                                            <div class="headliner">
-                                                <h2 class="title font-24 bold">{{ $slider['title'] }}</h2>
+                                        <div class="blog-card">
+                                            <div class="picture">
+                                                <img class="w-100 press" src="{{ $slider['img'] }}" alt="">
                                             </div>
-                                            <p class="main-text autoHide">{{ $slider['subtitle'] }}</p>
                                         </div>
                                     </div>
                                 </a>
-                            </div>
 
-                        @endforeach
-                    </div>
+                            @endforeach
+                        </div>
+                    @else
+                        <div class="nothing-placeholder">Ingenting här ännu</div>
+                    @endif
                 </div>
             </div>
         </div>

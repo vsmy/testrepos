@@ -30,7 +30,7 @@
     </section>
     <section>
         <div class="street-bg">
-            <div class="main-content-text row container">
+            <div class="main-content-text container">
                 <div class="header">
                     <h1 class="futura font-42">Kommunikation</h1>
                     <p class="subheader-info font-18">
@@ -108,62 +108,64 @@
                 </p>
             </div>
         </div>
-        <div class="bs-wizard">
-            <div class="col-xs-3 bs-wizard-step disabled">
-                <div class="text-center bs-wizard-stepnum">
-                    <div class="progress-img">
-                        <img src="img/progressbar/1.svg" alt="">
+        <div class="bs-wizard-container"><div class="bs-wizard">
+                <div class="col-xs-3 bs-wizard-step disabled">
+                    <div class="text-center bs-wizard-stepnum">
+                        <div class="progress-img">
+                            <img src="img/progressbar/1.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <a href="#" class="bs-wizard-dot"></a>
+                    <div class="bs-wizard-info text-center">
+                        <p class="year">2015</p>
+                        <p class="details">Informationssidan grundas</p>
                     </div>
                 </div>
-                <div class="progress"><div class="progress-bar"></div></div>
-                <a href="#" class="bs-wizard-dot"></a>
-                <div class="bs-wizard-info text-center">
-                    <p class="year">2015</p>
-                    <p class="details">Informationssidan grundas</p>
-                </div>
-            </div>
 
-            <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
-                <div class="text-center bs-wizard-stepnum">
-                    <div class="progress-img">
-                        <img src="img/progressbar/2.svg" alt="">
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+                    <div class="text-center bs-wizard-stepnum">
+                        <div class="progress-img">
+                            <img src="img/progressbar/2.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <a href="#" class="bs-wizard-dot"></a>
+                    <div class="bs-wizard-info text-center">
+                        <p class="year">2016</p>
+                        <p class="details">Löpande dokumentering av stadsutvecklings projekt</p>
                     </div>
                 </div>
-                <div class="progress"><div class="progress-bar"></div></div>
-                <a href="#" class="bs-wizard-dot"></a>
-                <div class="bs-wizard-info text-center">
-                    <p class="year">2016</p>
-                    <p class="details">Löpande dokumentering av stadsutvecklings projekt</p>
-                </div>
-            </div>
 
-            <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
-                <div class="text-center bs-wizard-stepnum">
-                    <div class="progress-img">
-                        <img src="img/progressbar/3.svg" alt="">
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+                    <div class="text-center bs-wizard-stepnum">
+                        <div class="progress-img">
+                            <img src="img/progressbar/3.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <a href="#" class="bs-wizard-dot"></a>
+                    <div class="bs-wizard-info text-center">
+                        <p class="year">2017</p>
+                        <p class="details">Vi inför kreativa projekt för deltagande stadsutveckling </p>
                     </div>
                 </div>
-                <div class="progress"><div class="progress-bar"></div></div>
-                <a href="#" class="bs-wizard-dot"></a>
-                <div class="bs-wizard-info text-center">
-                    <p class="year">2017</p>
-                    <p class="details">Vi inför kreativa projekt för deltagande stadsutveckling </p>
-                </div>
-            </div>
 
-            <div class="col-xs-3 bs-wizard-step disabled"><!-- active -->
-                <div class="text-center bs-wizard-stepnum">
-                    <div class="progress-img">
-                        <img src="img/progressbar/4.svg" alt="">
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- active -->
+                    <div class="text-center bs-wizard-stepnum">
+                        <div class="progress-img">
+                            <img src="img/progressbar/4.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <a href="#" class="bs-wizard-dot"></a>
+                    <div class="bs-wizard-info text-center">
+                        <p class="year">2019</p>
+                        <p class="details">Nylansering med ny profil</p>
                     </div>
                 </div>
-                <div class="progress"><div class="progress-bar"></div></div>
-                <a href="#" class="bs-wizard-dot"></a>
-                <div class="bs-wizard-info text-center">
-                    <p class="year">2019</p>
-                    <p class="details">Nylansering med ny profil</p>
-                </div>
             </div>
+            <p class="pb-details"></p>
         </div>
     </section>
     <script>
@@ -179,8 +181,6 @@
                         .then(response => response.json())
                         .then(data => {
                             var channel = data;
-                            console.log(videos, 'videos');
-                            console.log(channel, 'channel');
                             $('.preview').attr('src', videos.items[0].snippet.thumbnails.high.url);
                             $('.play').attr('data-video_id', videos.items[0].id.videoId);
                             $('.play').on('click', function () {
@@ -199,9 +199,11 @@
             let progressPoints = $('.bs-wizard').children();
             var i = 0;
             setInterval(function () {
+                let placeholder = document.querySelector('.pb-details');
                 if (i > 4) {
                     for (k = 0; k < progressPoints.length; k++) {
                         $(progressPoints[k]).removeClass('active').removeClass('complete').addClass('disabled');
+                        placeholder.innerHTML = '';
                     }
                     i = 0;
                 } else {
@@ -209,7 +211,10 @@
                         $(progressPoints[i-1]).removeClass('active').addClass('complete');
                     }
                     setTimeout(function () {
-                        if (i < 4) $(progressPoints[i]).removeClass('disabled').addClass('active');
+                        if (i < 4) {
+                            $(progressPoints[i]).removeClass('disabled').addClass('active');
+                            placeholder.innerHTML = document.querySelectorAll('.bs-wizard-info .details')[i].innerHTML;
+                        }
                         i++;
                     }, 600);
                 }

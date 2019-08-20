@@ -59,52 +59,62 @@
                     <h1 class="futura font-42">Senaste fran bloggen</h1>
                 </div>
                 <div class="cards">
-                    <div class="card">
-                        <div class="flag yellow"></div>
-                        <div class="picture">
-                            <img src="img/card-1-picture.png" alt="">
-                        </div>
-                        <div class="article">
-                            <div class="headliner">
-                                <h2 class="title font-24 bold">Title Post</h2>
-                                <span class="date font-16">2019-05-24</span>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div class="flag yellow"></div>
+                                    <div class="picture">
+                                        <img src="img/card-1-picture.png" alt="">
+                                    </div>
+                                    <div class="article">
+                                        <div class="headliner">
+                                            <h2 class="title font-24 bold">Title Post</h2>
+                                            <span class="date font-16">2019-05-24</span>
+                                        </div>
+                                        <p class="main-text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="main-text">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="flag green"></div>
-                        <div class="picture">
-                            <img src="img/card-2-picture.png" alt="">
-                        </div>
-                        <div class="article">
-                            <div class="headliner">
-                                <h2 class="title font-24 bold">Title Post</h2>
-                                <span class="date font-16">2019-05-24</span>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div class="flag green"></div>
+                                    <div class="picture">
+                                        <img src="img/card-2-picture.png" alt="">
+                                    </div>
+                                    <div class="article">
+                                        <div class="headliner">
+                                            <h2 class="title font-24 bold">Title Post</h2>
+                                            <span class="date font-16">2019-05-24</span>
+                                        </div>
+                                        <p class="main-text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="main-text">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="flag blue"></div>
-                        <div class="picture">
-                            <img src="img/card-3-picture.png" alt="">
-                        </div>
-                        <div class="article">
-                            <div class="headliner">
-                                <h2 class="title font-24 bold">Title Post</h2>
-                                <span class="date font-16">2019-05-24</span>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div class="flag blue"></div>
+                                    <div class="picture">
+                                        <img src="img/card-3-picture.png" alt="">
+                                    </div>
+                                    <div class="article">
+                                        <div class="headliner">
+                                            <h2 class="title font-24 bold">Title Post</h2>
+                                            <span class="date font-16">2019-05-24</span>
+                                        </div>
+                                        <p class="main-text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="main-text">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -139,7 +149,7 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-instagram" role="tabpanel" aria-labelledby="v-pills-instagram-tab">
                         <div class="grid-container" id="insta-images">
-                            <div class="img1">
+                            <div class="img1 img">
                                 <a class="post-link" href="#" target="_blank">
                                     <div class="card">
                                         <div class="flag yellow"></div>
@@ -151,7 +161,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="img2">
+                            <div class="img2 img">
                                 <a class="post-link" href="" target="_blank">
                                     <div class="card">
                                         <div class="flag green"></div>
@@ -163,7 +173,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="img3">
+                            <div class="img3 img">
                                 <a class="post-link" href="" target="_blank">
                                     <div class="card">
                                         <div class="flag salad"></div>
@@ -175,7 +185,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="img4">
+                            <div class="img4 img">
                                 <a class="post-link" href="" target="_blank">
                                     <div class="card">
                                         <div class="flag blue"></div>
@@ -187,7 +197,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="img5">
+                            <div class="img5 img">
                                 <a class="post-link" href="" target="_blank">
                                     <div class="card">
                                         <div class="flag purple"></div>
@@ -203,11 +213,11 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-youtube" role="tabpanel" aria-labelledby="v-pills-youtube-tab">
                         <div class="grid-container" id="youtube-videos">
-                            <div class="img1"></div>
-                            <div class="img2"></div>
-                            <div class="img3"></div>
-                            <div class="img4"></div>
-                            <div class="img5"></div>
+                            <div class="img1 img"></div>
+                            <div class="img2 img"></div>
+                            <div class="img3 img"></div>
+                            <div class="img4 img"></div>
+                            <div class="img5 img"></div>
                         </div>
                     </div>
 
@@ -231,12 +241,12 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-bookopened" role="tabpanel" aria-labelledby="v-pills-bookopened-tab">
                         <div class="grid-container-2" id="wp-posts">
-                            <div class="img1"></div>
-                            <div class="img2"></div>
-                            <div class="img3"></div>
-                            <div class="img4"></div>
-                            <div class="img5"></div>
-                            <div class="img6"></div>
+                            <div class="img1 img"></div>
+                            <div class="img2 img"></div>
+                            <div class="img3 img"></div>
+                            <div class="img4 img"></div>
+                            <div class="img5 img"></div>
+                            <div class="img6 img"></div>
                         </div>
                     </div>
                 </div>
@@ -247,6 +257,23 @@
         </div>
     </section>
 
+    <script src="js/swiper.js"></script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container',{
+            loop: false,
+            slidesPerView: 3,
+            breakpointsInverse: true,
+            breakpoints: {
+                1045: {
+                    slidesPerView: 3
+                },
+                1: {
+                    slidesPerView: 1
+                }
+            }
+        });
+    </script>
     <script type="text/javascript">
         $('#myTab .tab-btn').on('click', function (e) {
             e.preventDefault();
@@ -350,7 +377,7 @@
                     "<div class=\"blog-card\">" +
                     "   <div class=\"flag\" style='background-color: rgba(" + Math.floor(Math.random()*255) + ", " + Math.floor(Math.random()*255) + ", " + Math.floor(Math.random()*255) + ", 0.9)'></div>" +
                     "   <div class=\"picture\">" +
-                    "       <img src=\"img/blog-card-picture-5.png\" alt=\"\">" +
+                    "       <img class=\"gallery\" src=\"img/blog-card-picture-5.png\" alt=\"\">" +
                     "   </div>" +
                     "   <div class=\"article\">" +
                     "       <div class=\"headliner\">" +
